@@ -7,4 +7,5 @@ const AboutPage = () => {
     return <div>{t('О сайте')}</div>;
 };
 
+
 export default AboutPage;

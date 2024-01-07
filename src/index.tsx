@@ -1,19 +1,23 @@
-import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
-import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer'
+import { BrowserRouter } from 'react-router-dom';
 import App from './app/App';
 import './shared/config/i18n/i18n';
 
+const root = document.getElementById('root');
+if (!root) {
+  throw new Error('root not found');
+}
 
-render(
+const container = createRoot(root);
+
+container.render(
+  <ErrorBoundary>
     <BrowserRouter>
-        <ErrorBoundary>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
-        </ErrorBoundary>
-    </BrowserRouter>,
-    document.getElementById('root'),
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </ErrorBoundary>,
 );

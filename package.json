@@ -1,7 +1,6 @@
 {
   "name": "production-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --env port=3000",
@@ -15,10 +14,11 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "test-storybook": "test-storybook -c ./config/storybook"
+    "test-storybook": "test-storybook -c ./config/storybook",
+    "chromatic": "npx chromatic --project-token chpt_e24dc6234094542"
   },
   "keywords": [],
-  "author": "",
+  "author": "STIL",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.7",

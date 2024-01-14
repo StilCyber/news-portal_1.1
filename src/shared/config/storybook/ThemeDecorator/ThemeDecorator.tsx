@@ -1,15 +1,20 @@
-import { Theme } from 'app/providers/ThemeProvider';
+import { Theme, ThemeProvider } from 'app/providers/ThemeProvider';
+import { ThemeContextProps } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import 'app/styles/index.scss';
 import React from 'react';
 
-interface IDecoratorProps {
-    children: React.ReactNode;
-    theme: string;
-}
+// interface IDecoratorProps {
+//   children: React.ReactNode;
+//   theme: any;
+// }
 
-const ThemeDecorator = (props: IDecoratorProps) => {
-    const { children, theme } = props;
-    return <div className={`app ${theme}`}>{children}</div>;
+const ThemeDecorator = (props: ThemeContextProps) => {
+  const { children, theme } = props;
+  return (
+    <ThemeProvider themeProps={theme}>
+      <div className={`app ${theme}`}>{children}</div>
+    </ThemeProvider>
+  );
 };
 
 export default ThemeDecorator;

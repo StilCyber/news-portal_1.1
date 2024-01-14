@@ -9,6 +9,7 @@ export interface ThemeContextProps {
     theme?: Theme;
     setTheme?: (theme: Theme) => void;
     children?: React.ReactNode
+
 }
 
 export const ThemeContext = createContext<ThemeContextProps>({});

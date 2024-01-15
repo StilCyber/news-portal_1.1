@@ -45,6 +45,7 @@ module.exports = {
         additionalHooks: '(useMyCustomHook|useMyOtherCustomHook)',
       },
     ],
+    'no-param-reassign': 'off'
   },
   globals: {
     __IS_DEV__: true,

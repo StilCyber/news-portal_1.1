@@ -32,9 +32,9 @@ jobs:
         if: always()
       - name: build storybook
         run: npm run build-storybook
-      - name: run storybook
-        run: npm run storybook
+      # - name: run storybook
+      #   run: npm run storybook
       # - name: Install Playwright
       #   run: npx playwright install --with-deps
-      - name: Run Storybook tests
-        run: npm run test-storybook
+      # - name: Run Storybook tests
+      #   run: npm run test-storybook

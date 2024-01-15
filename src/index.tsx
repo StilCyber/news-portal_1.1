@@ -2,7 +2,8 @@ import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';
-import 'app/styles/index.scss'
+import 'app/styles/index.scss';
+import { StoreProvider } from 'app/providers/StoreProvider';
 import App from './app/App';
 import './shared/config/i18n/i18n';
 
@@ -14,11 +15,13 @@ if (!root) {
 const container = createRoot(root);
 
 container.render(
-  <ErrorBoundary>
-    <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
-  </ErrorBoundary>,
+  <StoreProvider>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
+  </StoreProvider>,
 );

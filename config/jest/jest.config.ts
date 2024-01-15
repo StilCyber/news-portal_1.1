@@ -7,6 +7,9 @@ import path from 'path';
 import type { Config } from 'jest';
 
 const config: Config = {
+  globals: {
+    __IS_DEV__: true,
+  },
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',
@@ -22,10 +25,8 @@ const config: Config = {
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
   modulePaths: ['<rootDir>src'],
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-],
-
+  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
+  
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
 

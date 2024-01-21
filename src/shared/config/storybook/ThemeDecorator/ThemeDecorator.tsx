@@ -3,10 +3,6 @@ import { ThemeContextProps } from 'app/providers/ThemeProvider/lib/ThemeContext'
 import 'app/styles/index.scss';
 import React from 'react';
 
-// interface IDecoratorProps {
-//   children: React.ReactNode;
-//   theme: any;
-// }
 
 const ThemeDecorator = (props: ThemeContextProps) => {
   const { children, theme } = props;

@@ -23,5 +23,5 @@ function componentRender(
     </StoreProvider>,
   );
 }
-
+ 
 export default componentRender;

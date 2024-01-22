@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Stil",
+    "lastname": "chan",
+    "age": 22,
+    "currency": "EUR",
+    "country": "Netherlands",
+    "city": "Rotterdam",
+    "username": "admin",
+    "avatar": "https://sun9-23.userapi.com/sun9-53/s/v1/ig2/VzBRgZKQxNb0LfL1r-O95Epdll8wiCZOhjV01saxhgsH8p3S7nakm7vr9we8rZgrQPKsxEi1V0YdxvjTBx33FhOL.jpg?size=200x200&quality=96&crop=64,64,512,512&ava=1"
+  }
 }

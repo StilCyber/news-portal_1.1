@@ -19,7 +19,7 @@ export function createReducerManager(
   return {
     getReducerMap: () => reducers,
 
-    reduce: (state: StateSchema, action: Action) => {
+    reduce: (state: DeepPartial<StateSchema>, action: Action) => {
       if (keysToRemove.length > 0) {
         state = { ...state };
         keysToRemove.forEach((key) => {
@@ -28,7 +28,7 @@ export function createReducerManager(
 
         keysToRemove = [];
       }
-
+      // @ts-ignore
       return combinedReducer(state, action);
     },
 

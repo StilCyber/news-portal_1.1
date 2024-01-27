@@ -9,19 +9,19 @@ import './shared/config/i18n/i18n';
 
 const root = document.getElementById('root');
 if (!root) {
-  throw new Error('root not found');
+   throw new Error('root not found');
 }
 
 const container = createRoot(root);
 
 container.render(
-  <StoreProvider>
-    <ErrorBoundary>
-      <BrowserRouter>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </ErrorBoundary>
-  </StoreProvider>,
+   <BrowserRouter>
+      <StoreProvider>
+         <ErrorBoundary>
+            <ThemeProvider>
+               <App />
+            </ThemeProvider>
+         </ErrorBoundary>
+      </StoreProvider>
+   </BrowserRouter>,
 );

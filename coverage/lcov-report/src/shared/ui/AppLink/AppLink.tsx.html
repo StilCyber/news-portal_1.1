@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>37/37</span>
+                <span class='fraction'>36/36</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>37/37</span>
+                <span class='fraction'>36/36</span>
             </div>
         
             
@@ -99,8 +99,7 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -117,63 +116,61 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { classNames } from 'shared/lib/classNames/classNames';
 import { Link, LinkProps } from 'react-router-dom';
-import React, { FC } from 'react';
+import React, { FC, ReactNode, memo } from 'react';
 import cls from './AppLink.module.scss';
 &nbsp;
 export enum AppLinkTheme {
-    PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-    RED = 'red',
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  RED = 'red',
 }
 &nbsp;
 interface AppLinkProps extends LinkProps {
-    className?: string;
-    theme?: AppLinkTheme;
+  className?: string;
+  theme?: AppLinkTheme;
+  children?: ReactNode;
 }
 &nbsp;
-export const AppLink: FC&lt;AppLinkProps&gt; = (props) =&gt; {
-    const {
-        to,
-        className,
-        children,
-        theme<span class="branch-0 cbranch-no" title="branch not covered" > = AppLinkTheme.PRIMARY,</span>
-        ...otherProps
-    } = props;
+export const AppLink = memo((props: AppLinkProps) =&gt; {
+  const {
+    to,
+    className,
+    children,
+    theme<span class="branch-0 cbranch-no" title="branch not covered" > = AppLinkTheme.PRIMARY,</span>
+    ...otherProps
+  } = props;
 &nbsp;
-    return (
-        &lt;Link
-            to={to}
-            className={classNames(cls.AppLink, { [cls[theme]]: true }, [
-                className,
-            ])}
-            {...otherProps}
-        &gt;
-            {children}
-        &lt;/Link&gt;
-    );
-};
+  return (
+    &lt;Link
+      to={to}
+      className={classNames(cls.AppLink, { [cls[theme]]: true }, [className])}
+      {...otherProps}
+    &gt;
+      {children}
+    &lt;/Link&gt;
+  );
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -181,7 +178,7 @@ export const AppLink: FC&lt;AppLinkProps&gt; = (props) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-22T12:41:01.864Z
+                at 2024-01-23T15:41:43.615Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

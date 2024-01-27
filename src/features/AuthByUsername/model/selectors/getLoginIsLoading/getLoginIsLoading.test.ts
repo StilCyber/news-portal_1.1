@@ -3,10 +3,8 @@ import { getLoginIsLoading } from "./getLoginIsLoading"
 
 describe('getLoginIsLoading.test', () => {
   test('should return true', () => {
-    const state: Partial<StateSchema> = {
+    const state: DeepPartial<StateSchema> = {
         loginForm: {
-            username: "",
-            password: "",
             isLoading: true
         }
     }
@@ -14,10 +12,8 @@ describe('getLoginIsLoading.test', () => {
   })
 
   test('should return false', () => {
-    const state: Partial<StateSchema> = {
+    const state: DeepPartial<StateSchema> = {
         loginForm: {
-            username: "",
-            password: "",
             isLoading: false
         }
     }

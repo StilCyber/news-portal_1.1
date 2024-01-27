@@ -8,9 +8,11 @@ import { Modal } from 'shared/ui/Modal/Modal';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'Entities/User';
 
+
 function App() {
   const { theme } = useTheme();
   const dispatch = useDispatch()
+
 
   useEffect(() => {
     dispatch(userActions.initAuthData())

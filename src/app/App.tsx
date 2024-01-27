@@ -7,33 +7,33 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'Entities/User';
-
+import { useTranslation } from 'react-i18next';
 
 function App() {
-  const { theme } = useTheme();
-  const dispatch = useDispatch()
+   const { theme } = useTheme();
+   const dispatch = useDispatch();
+   const { t } = useTranslation();
 
+   useEffect(() => {
+      dispatch(userActions.initAuthData());
+   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(userActions.initAuthData())
-  }, [dispatch])
+   const [isOpen, setIsOpen] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className={classNames('app', {}, [])}>
-      <Suspense fallback="">
-        <Navbar />
-        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          lorem lorem
-        </Modal>
-        <div className="content-page">
-          <Sidebar />
-          <AppRouter />
-        </div>
-      </Suspense>
-    </div>
-  );
+   return (
+      <div className={classNames('app', {}, [])}>
+         <Suspense fallback="">
+            <Navbar />
+            <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+               {t('lorem')}
+            </Modal>
+            <div className="content-page">
+               <Sidebar />
+               <AppRouter />
+            </div>
+         </Suspense>
+      </div>
+   );
 }
 
 export default App;

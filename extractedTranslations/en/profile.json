@@ -2,7 +2,13 @@
   "Edit profile": "Edit profile",
   "Error loading the profile": "Error loading the profile",
   "Profile": "Profile",
+  "Select a country": "",
+  "Select a currency": "",
   "Try refreshing the page": "Try refreshing the page",
+  "Your age": "",
+  "Your avatar": "",
+  "Your city": "",
   "Your lastname": "Your lastname",
-  "Your name": "Your name"
+  "Your name": "Your name",
+  "Your username": ""
 }

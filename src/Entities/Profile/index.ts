@@ -1,4 +1,8 @@
-import { Profile, ProfileSchema } from './model/types/profile';
+import {
+   Profile,
+   ProfileSchema,
+   ValidateProfileErrors,
+} from './model/types/profile';
 import { profileActions, profileReducer } from './model/slice/profileSlice';
 import { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
 import { updateProfileData } from './model/services/updateProfileData/updateProfileData';
@@ -8,6 +12,7 @@ import { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getPr
 import { getProfileError } from './model/selectors/getProfileError/getProfileError';
 import { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
+import { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 
 export {
    Profile,
@@ -22,4 +27,6 @@ export {
    getProfileReadonly,
    getProfileForm,
    updateProfileData,
+   getProfileValidateErrors,
+   ValidateProfileErrors,
 };

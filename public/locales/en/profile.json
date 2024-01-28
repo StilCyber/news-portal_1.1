@@ -11,5 +11,10 @@
    "Your username": "Your username",
    "Your avatar": "Your avatar",
    "Select a currency": "Select a currency",
-   "Select a country": "Select a country"
+   "Select a country": "Select a country",
+   "Server error": "Server error",
+   "Incorrect age": "Incorrect age",
+   "Incorrect region": "Incorrect region",
+   "First and last name are required": "First and last name are required",
+   "The data is not specified": "The data is not specified"
 }

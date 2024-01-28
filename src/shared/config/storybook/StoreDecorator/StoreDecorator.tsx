@@ -3,13 +3,13 @@ import 'app/styles/index.scss';
 import React, { ReactNode } from 'react';
 
 interface StoreDecoratorProps {
-   state?: StateSchema;
+   state?: DeepPartial<StateSchema>;
    children: ReactNode;
 }
 
 const StoreDecorator = (props: StoreDecoratorProps) => {
    const { state, children } = props;
-   return <StoreProvider>{children}</StoreProvider>;
+   return <StoreProvider initialState={state}>{children}</StoreProvider>;
 };
 
 export default StoreDecorator;

@@ -6,9 +6,8 @@ import { updateProfileData } from '../services/updateProfileData/updateProfileDa
 const initialState: ProfileSchema = {
    readonly: true,
    isLoading: false,
-   error: undefined,
    data: undefined,
-   form: undefined
+   form: undefined,
 };
 
 export const profileSlice = createSlice({
@@ -27,6 +26,7 @@ export const profileSlice = createSlice({
       canselEdit: (state) => {
          state.readonly = true;
          state.form = state.data;
+         state.validateErrors = undefined;
       },
    },
    extraReducers: (builder) => {
@@ -49,7 +49,7 @@ export const profileSlice = createSlice({
          })
 
          .addCase(updateProfileData.pending, (state) => {
-            state.error = undefined;
+            state.validateErrors = undefined;
             state.isLoading = true;
          })
          .addCase(
@@ -58,11 +58,12 @@ export const profileSlice = createSlice({
                state.isLoading = false;
                state.data = action.payload;
                state.form = action.payload;
-               state.readonly = true
+               state.readonly = true;
+               state.validateErrors = undefined;
             },
          )
          .addCase(updateProfileData.rejected, (state, action) => {
-            state.error = action.payload;
+            state.validateErrors = action.payload;
             state.isLoading = false;
          });
    },

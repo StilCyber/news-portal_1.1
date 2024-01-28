@@ -11,5 +11,10 @@
    "Your username": "Ваше имя пользователя",
    "Your avatar": "Ваш аватар",
    "Select a currency": "Выберите валюту",
-   "Select a country": "Выберите страну"
+   "Select a country": "Выберите страну",
+   "Server error": "Ошибка сервера",
+   "Incorrect age": "Некорректный возраст",
+   "Incorrect region": "Неверно указан регион",
+   "First and last name are required": "Имя и фамилия обязательны",
+   "The data is not specified": "Данные не указаны"
 }

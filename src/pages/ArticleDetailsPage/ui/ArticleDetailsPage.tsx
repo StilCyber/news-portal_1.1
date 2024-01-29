@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleDetails } from 'Entities/Article';
 import { useParams } from 'react-router-dom';
-import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
    className?: string;
@@ -14,15 +13,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
    const { t } = useTranslation('article');
    const { id } = useParams<{ id: string }>();
 
-   if(!id) {
-      return (
-         <div>{t('The article was not found')}</div>
-      )
+   if (!id) {
+      return <div>{t('The article was not found')}</div>;
    }
 
    return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-         <ArticleDetails id={id}/>
+      <div className={classNames('', {}, [className])}>
+         <ArticleDetails id={id} />
       </div>
    );
 };

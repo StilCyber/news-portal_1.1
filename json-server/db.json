@@ -3,7 +3,7 @@
       {
          "id": "1",
          "title": "json-server",
-         "userId": 1
+         "userId": "1"
       },
       {
          "id": "2",
@@ -107,23 +107,25 @@
          "id": "1",
          "username": "admin",
          "password": "123",
-         "role": "ADMIN"
+         "role": "ADMIN",
+         "avatar": "https://i.pinimg.com/236x/49/9c/01/499c019310a9b3e7a4cd613b0183cb37--dance-devil.jpg"
       },
       {
          "id": "2",
          "username": "user",
          "password": "123",
-         "role": "USER"
+         "role": "USER",
+         "avatar": "https://i.pinimg.com/236x/49/9c/01/499c019310a9b3e7a4cd613b0183cb37--dance-devil.jpg"
       }
    ],
    "profile": {
-      "first": "Stil",
-      "lastname": "chan123",
-      "age": 22,
-      "currency": "USD",
-      "country": "USA",
-      "city": "Rotterdam",
-      "username": "admin",
-      "avatar": "https://sun9-23.userapi.com/sun9-53/s/v1/ig2/VzBRgZKQxNb0LfL1r-O95Epdll8wiCZOhjV01saxhgsH8p3S7nakm7vr9we8rZgrQPKsxEi1V0YdxvjTBx33FhOL.jpg?size=200x200&quality=96&crop=64,64,512,512&ava=1"
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://i.pinimg.com/736x/69/84/e1/6984e1f66f7f89a4848c6c46712d2730.jpg"
    }
 }

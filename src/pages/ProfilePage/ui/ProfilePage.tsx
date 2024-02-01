@@ -23,6 +23,8 @@ import { useSelector } from 'react-redux';
 import { Currency } from 'Entities/Currency';
 import { Country } from 'Entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 interface ProfilePageProps {
@@ -42,6 +44,7 @@ const ProfilePage = memo((props: ProfilePageProps) => {
    const error = useSelector(getProfileError);
    const readonly = useSelector(getProfileReadonly);
    const validateErrors = useSelector(getProfileValidateErrors);
+   const { id } = useParams<{ id: string }>();
 
    const validateErrorTranslates = {
       [ValidateProfileErrors.SERVER_ERROR]: t('Server error'),
@@ -109,11 +112,11 @@ const ProfilePage = memo((props: ProfilePageProps) => {
       [dispatch],
    );
 
-   useEffect(() => {
-      if (__PROJECT__ !== 'storybook') {
-         dispatch(fetchProfileData());
+   useInitialEffect(() => {
+      if (id) {
+         dispatch(fetchProfileData(id));
       }
-   }, [dispatch]);
+   });
 
    return (
       <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

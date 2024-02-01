@@ -3,6 +3,7 @@ import { profileReducer } from 'Entities/Profile';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import 'app/styles/index.scss';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
 import { ReactNode } from 'react';
 import { ReducersList } from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
 
@@ -16,6 +17,7 @@ const defaultAsyncReducers: ReducersList = {
    loginForm: loginReducer,
    profile: profileReducer,
    articleDetails: articleDetailsReducer,
+   articleDetailsComments: articleDetailsCommentsReducer,
 };
 
 const StoreDecorator = (props: StoreDecoratorProps) => {

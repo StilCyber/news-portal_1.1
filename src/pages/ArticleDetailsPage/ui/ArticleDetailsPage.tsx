@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { ArticleDetails } from 'Entities/Article';
 import { useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
@@ -12,13 +12,14 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/addCommentForm';
 import cls from './ArticleDetailsPage.module.scss';
 import {
-   articleDetailsCommentsActions,
    articleDetailsCommentsReducer,
    selectAll,
 } from '../model/slices/articleDetailsCommentsSlice';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { addCommentForArticle } from '../model/services/addCommentForArticle/addCommentForArticle';
 
 interface ArticleDetailsPageProps {
    className?: string;
@@ -41,6 +42,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       dispatch(fetchCommentsByArticleId(id));
    });
 
+   const onSendComment = useCallback(
+      (text: string) => {
+         dispatch(addCommentForArticle(text));
+      },
+      [dispatch],
+   );
+
    if (!id) {
       return <div>{t('The article was not found')}</div>;
    }
@@ -50,6 +58,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
          <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
             <ArticleDetails id={id} />
             <Text title={t('Comments')} className={cls.commentTitle} />
+            <AddCommentForm onSendComment={onSendComment} />
             <CommentList comments={comments as Comment[]} />
          </div>
       </DynamicModuleLoader>

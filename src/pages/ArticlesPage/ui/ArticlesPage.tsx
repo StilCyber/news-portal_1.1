@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { ArticleList } from 'Entities/Article/ui/ArticleList/ArticleList';
-import { Article } from 'Entities/Article';
+import { Article, ArticleView, ArticleViewSelector } from 'Entities/Article';
 import {
    DynamicModuleLoader,
    ReducersList,
@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import cls from './ArticlesPage.module.scss';
 import {
+   articlesPageActions,
    articlesPageReducer,
    getArticles,
 } from '../model/slice/articlesPageSlice';
@@ -37,13 +38,19 @@ const ArticlesPage = (props: ArticlesPageProps) => {
    const isLoading = useSelector(getArticlesPageIsLoading);
    const view = useSelector(getArticlesPageView);
 
+   const onChangeView = useCallback((view: ArticleView) => {
+      dispatch(articlesPageActions.setView(view))
+   }, [dispatch])
+
    useInitialEffect(() => {
       dispatch(fetchArticlesList());
+      dispatch(articlesPageActions.initState())
    });
 
    return (
       <DynamicModuleLoader removeAfterUnmount reducers={reducers}>
          <div className={classNames(cls.ArticlesPage, {}, [className])}>
+            <ArticleViewSelector view={view} onViewClick={onChangeView}/>
             <ArticleList
                isLoading={isLoading}
                articles={articles as Article[]}

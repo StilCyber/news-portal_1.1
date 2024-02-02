@@ -30,6 +30,11 @@ const state: DeepPartial<StateSchema> = {
          img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
          views: 1022,
          createdAt: '26.02.2022',
+         user: {
+            id: '1',
+            username: 'Stil',
+            avatar: 'https://i.pinimg.com/736x/5d/71/5d/5d715dff6bce6937722a6d26888d5d62.jpg',
+         },
          type: [ArticleType.IT],
          blocks: [
             {

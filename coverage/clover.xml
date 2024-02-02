@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1706716730937" clover="3.2.0">
-  <project timestamp="1706716730937" name="All files">
-    <metrics statements="1763" coveredstatements="1340" conditionals="364" coveredconditionals="269" methods="151" coveredmethods="102" elements="2278" coveredelements="1711" complexity="0" loc="1763" ncloc="1763" packages="72" files="75" classes="75"/>
+<coverage generated="1706790976218" clover="3.2.0">
+  <project timestamp="1706790976218" name="All files">
+    <metrics statements="1773" coveredstatements="1333" conditionals="368" coveredconditionals="269" methods="151" coveredmethods="102" elements="2292" coveredelements="1704" complexity="0" loc="1773" ncloc="1773" packages="72" files="75" classes="75"/>
     <package name="config.jest">
       <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="jestEmptyComponent.tsx" path="/home/dumat/projects/news-portal_1.1/config/jest/jestEmptyComponent.tsx">
@@ -326,9 +326,9 @@
       </file>
     </package>
     <package name="src.Entities.Profile.model.services.fetchProfileData">
-      <metrics statements="22" coveredstatements="21" conditionals="91" coveredconditionals="54" methods="39" coveredmethods="24"/>
+      <metrics statements="21" coveredstatements="20" conditionals="91" coveredconditionals="54" methods="39" coveredmethods="24"/>
       <file name="fetchProfileData.ts" path="/home/dumat/projects/news-portal_1.1/src/Entities/Profile/model/services/fetchProfileData/fetchProfileData.ts">
-        <metrics statements="22" coveredstatements="21" conditionals="91" coveredconditionals="54" methods="39" coveredmethods="24"/>
+        <metrics statements="21" coveredstatements="20" conditionals="91" coveredconditionals="54" methods="39" coveredmethods="24"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="43" falsecount="36"/>
         <line num="3" count="1" type="stmt"/>
@@ -347,16 +347,15 @@
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
       </file>
     </package>
     <package name="src.Entities.Profile.model.services.updateProfileData">
-      <metrics statements="29" coveredstatements="28" conditionals="23" coveredconditionals="21" methods="6" coveredmethods="5"/>
+      <metrics statements="31" coveredstatements="30" conditionals="24" coveredconditionals="21" methods="6" coveredmethods="5"/>
       <file name="updateProfileData.ts" path="/home/dumat/projects/news-portal_1.1/src/Entities/Profile/model/services/updateProfileData/updateProfileData.ts">
-        <metrics statements="29" coveredstatements="28" conditionals="23" coveredconditionals="21" methods="6" coveredmethods="5"/>
+        <metrics statements="31" coveredstatements="30" conditionals="24" coveredconditionals="21" methods="6" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="7" falsecount="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -375,17 +374,19 @@
         <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="17" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="19" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="1" type="cond" truecount="1" falsecount="0"/>
       </file>
     </package>
     <package name="src.Entities.Profile.model.services.validateProfileData">
@@ -495,9 +496,9 @@
       </file>
     </package>
     <package name="src.Entities.Profile.model.types">
-      <metrics statements="30" coveredstatements="30" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+      <metrics statements="31" coveredstatements="31" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <file name="profile.ts" path="/home/dumat/projects/news-portal_1.1/src/Entities/Profile/model/types/profile.ts">
-        <metrics statements="30" coveredstatements="30" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <metrics statements="31" coveredstatements="31" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -528,6 +529,7 @@
         <line num="28" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Entities.Profile.ui.ProfileCard">
@@ -2064,10 +2066,10 @@
         <line num="54" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.widgets.Sidebar.model">
-      <metrics statements="38" coveredstatements="38" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="items.ts" path="/home/dumat/projects/news-portal_1.1/src/widgets/Sidebar/model/items.ts">
-        <metrics statements="38" coveredstatements="38" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    <package name="src.widgets.Sidebar.model.selectors">
+      <metrics statements="40" coveredstatements="25" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
+      <file name="getSidebarItems.ts" path="/home/dumat/projects/news-portal_1.1/src/widgets/Sidebar/model/selectors/getSidebarItems.ts">
+        <metrics statements="40" coveredstatements="25" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -2077,7 +2079,7 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
@@ -2090,83 +2092,30 @@
         <line num="20" count="1" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.widgets.Sidebar.ui.Sidebar.Sidebar">
-      <metrics statements="49" coveredstatements="49" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <metrics statements="56" coveredstatements="56" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <file name="Sidebar.tsx" path="/home/dumat/projects/news-portal_1.1/src/widgets/Sidebar/ui/Sidebar/Sidebar/Sidebar.tsx">
-        <metrics statements="49" coveredstatements="49" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="17" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="23" count="4" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
-        <line num="25" count="4" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="27" count="4" type="stmt"/>
-        <line num="28" count="4" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="33" count="4" type="stmt"/>
-        <line num="34" count="4" type="stmt"/>
-        <line num="35" count="4" type="stmt"/>
-        <line num="36" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="4" type="stmt"/>
-        <line num="38" count="4" type="stmt"/>
-        <line num="39" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="40" count="16" type="stmt"/>
-        <line num="41" count="4" type="stmt"/>
-        <line num="42" count="4" type="stmt"/>
-        <line num="43" count="4" type="stmt"/>
-        <line num="44" count="4" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
-        <line num="46" count="4" type="stmt"/>
-        <line num="47" count="4" type="stmt"/>
-        <line num="48" count="4" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.widgets.Sidebar.ui.Sidebar.SidebarItem">
-      <metrics statements="37" coveredstatements="37" conditionals="3" coveredconditionals="3" methods="0" coveredmethods="0"/>
-      <file name="SidebarItem.tsx" path="/home/dumat/projects/news-portal_1.1/src/widgets/Sidebar/ui/Sidebar/SidebarItem/SidebarItem.tsx">
-        <metrics statements="37" coveredstatements="37" conditionals="3" coveredconditionals="3" methods="0" coveredmethods="0"/>
+        <metrics statements="56" coveredstatements="56" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -2183,12 +2132,74 @@
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="16" type="stmt"/>
-        <line num="18" count="16" type="stmt"/>
-        <line num="19" count="16" type="stmt"/>
-        <line num="20" count="16" type="stmt"/>
-        <line num="21" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="22" count="8" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="46" count="4" type="stmt"/>
+        <line num="47" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="4" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="54" count="4" type="stmt"/>
+        <line num="55" count="4" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.widgets.Sidebar.ui.Sidebar.SidebarItem">
+      <metrics statements="36" coveredstatements="34" conditionals="3" coveredconditionals="1" methods="0" coveredmethods="0"/>
+      <file name="SidebarItem.tsx" path="/home/dumat/projects/news-portal_1.1/src/widgets/Sidebar/ui/Sidebar/SidebarItem/SidebarItem.tsx">
+        <metrics statements="36" coveredstatements="34" conditionals="3" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="23" count="8" type="stmt"/>
         <line num="24" count="8" type="stmt"/>
         <line num="25" count="8" type="stmt"/>
@@ -2202,8 +2213,7 @@
         <line num="33" count="8" type="stmt"/>
         <line num="34" count="8" type="stmt"/>
         <line num="35" count="8" type="stmt"/>
-        <line num="36" count="8" type="stmt"/>
-        <line num="37" count="8" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
     </package>
   </project>

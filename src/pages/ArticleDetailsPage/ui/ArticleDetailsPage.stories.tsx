@@ -31,6 +31,11 @@ const state: DeepPartial<StateSchema> = {
          views: 1022,
          createdAt: '26.02.2022',
          type: [ArticleType.IT],
+         user: {
+            id: '1',
+            username: 'Stil',
+            avatar: 'https://i.pinimg.com/736x/5d/71/5d/5d715dff6bce6937722a6d26888d5d62.jpg',
+         },
          blocks: [
             {
                id: '1',

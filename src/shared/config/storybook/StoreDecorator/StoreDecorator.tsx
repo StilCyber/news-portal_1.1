@@ -3,7 +3,7 @@ import { profileReducer } from 'Entities/Profile';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import 'app/styles/index.scss';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
-import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+import { articleDetailsPageReducer } from 'pages/ArticlesPage';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
 import { ReactNode } from 'react';
 import { ReducersList } from 'shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
@@ -18,7 +18,7 @@ const defaultAsyncReducers: ReducersList = {
    loginForm: loginReducer,
    profile: profileReducer,
    articleDetails: articleDetailsReducer,
-   articleDetailsComments: articleDetailsCommentsReducer,
+   articleDetailsPage: articleDetailsPageReducer,
    articlesPage: articlesPageReducer,
 };
 

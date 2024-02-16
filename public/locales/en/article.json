@@ -4,5 +4,19 @@
    "The article was not found": "The article was not found",
    "An error occurred while uploading the article": "An error occurred while uploading the article",
    "Comments": "comments",
-   "Back to the list": "Back to the list"
+   "Back to the list": "Back to the list",
+   "Sort options": "Sort options",
+   "Search": "Search",
+   "by": "by",
+   "ascending": "ascending",
+   "descending": "descending",
+   "date of creation": "date of creation",
+   "title": "title",
+   "views": "views",
+   "All articles": "All articles",
+   "IT": "IT",
+   "Science": "Science",
+   "Economics": "Economics",
+   "Articles not found": "Articles not found",
+   "Recommend": "Recommend"
 }

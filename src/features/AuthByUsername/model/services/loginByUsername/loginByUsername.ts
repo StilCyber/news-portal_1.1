@@ -26,12 +26,11 @@ export const loginByUsername = createAsyncThunk<
          JSON.stringify(response.data),
       );
       dispatch(userActions.setAuthData(response.data));
-      if (extra.navigate) {
-         extra.navigate('/profile');
-      }
+      // if (extra.navigate) {
+      //    extra.navigate('/profile');
+      // }
       return response.data;
    } catch (e) {
-      console.log(e);
       return rejectWithValue('error');
    }
 });

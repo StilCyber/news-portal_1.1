@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>56/56</span>
+                <span class='fraction'>28/56</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>56/56</span>
+                <span class='fraction'>28/56</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -146,34 +146,34 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span>
-<span class="cline-any cline-yes">13x</span></td><td class="text"><pre class="prettyprint lang-js">import React, { ButtonHTMLAttributes, FC, memo } from 'react';
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { ButtonHTMLAttributes, FC, memo } from 'react';
 import { Mods, classNames } from '../../lib/classNames/classNames';
 import cls from './Button.module.scss';
 &nbsp;
@@ -201,41 +201,41 @@ interface ButtonProps extends ButtonHTMLAttributes&lt;HTMLButtonElement&gt; {
 }
 &nbsp;
 export const Button = memo((props: ButtonProps) =&gt; {
-  const {
-    className = '',
-    children,
-    theme = ThemeButton.OUTLINE,
-    square,
-    disabled,
-    size = ButtonSize.M,
-    ...otherProps
-  } = props;
-  const mods: Mods = {
-    [cls[theme]]: true,
-    [cls.square]: square,
-    [cls[size]]: true,
-    [cls.disabled]: disabled,
-  };
-&nbsp;
-  return (
-    &lt;button
-      type="button"
-      className={classNames(cls.Button, mods, [className])}
-      disabled={disabled}
-      {...otherProps}
-    &gt;
-      {children}
-    &lt;/button&gt;
-  );
-}
-)</pre></td></tr></table></pre>
+<span class="cstat-no" title="statement not covered" >  const {</span>
+<span class="cstat-no" title="statement not covered" >    className = '',</span>
+<span class="cstat-no" title="statement not covered" >    children,</span>
+<span class="cstat-no" title="statement not covered" >    theme = ThemeButton.OUTLINE,</span>
+<span class="cstat-no" title="statement not covered" >    square,</span>
+<span class="cstat-no" title="statement not covered" >    disabled,</span>
+<span class="cstat-no" title="statement not covered" >    size = ButtonSize.M,</span>
+<span class="cstat-no" title="statement not covered" >    ...otherProps</span>
+<span class="cstat-no" title="statement not covered" >  } = props;</span>
+<span class="cstat-no" title="statement not covered" >  const mods: Mods = {</span>
+<span class="cstat-no" title="statement not covered" >    [cls[theme]]: true,</span>
+<span class="cstat-no" title="statement not covered" >    [cls.square]: square,</span>
+<span class="cstat-no" title="statement not covered" >    [cls[size]]: true,</span>
+<span class="cstat-no" title="statement not covered" >    [cls.disabled]: disabled,</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  return (</span>
+<span class="cstat-no" title="statement not covered" >    &lt;button</span>
+<span class="cstat-no" title="statement not covered" >      type="button"</span>
+<span class="cstat-no" title="statement not covered" >      className={classNames(cls.Button, mods, [className])}</span>
+<span class="cstat-no" title="statement not covered" >      disabled={disabled}</span>
+<span class="cstat-no" title="statement not covered" >      {...otherProps}</span>
+<span class="cstat-no" title="statement not covered" >    &gt;</span>
+<span class="cstat-no" title="statement not covered" >      {children}</span>
+<span class="cstat-no" title="statement not covered" >    &lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >  );</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" >)</span></pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-01T12:36:16.003Z
+                at 2024-02-16T07:03:08.952Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

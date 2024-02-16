@@ -34,6 +34,7 @@ const articleDetailsCommentsSlice = createSlice({
                state.isLoading = false;
                articleDetailsCommentsAdapter.upsertMany(state, action.payload);
             },
+
          )
          .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
             state.isLoading = false;
@@ -44,7 +45,7 @@ const articleDetailsCommentsSlice = createSlice({
 
 export const { selectAll, selectEntities } =
    articleDetailsCommentsAdapter.getSelectors<StateSchema>(
-      (state: StateSchema) => state.articleDetailsComments || initialState,
+      (state: StateSchema) => state.articleDetailsPage?.comments|| initialState,
    );
 
 export const { actions: articleDetailsCommentsActions } =

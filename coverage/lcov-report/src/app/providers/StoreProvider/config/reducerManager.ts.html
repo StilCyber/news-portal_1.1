@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>33/55</span>
+                <span class='fraction'>40/64</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/5</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>33/55</span>
+                <span class='fraction'>40/64</span>
             </div>
         
             
@@ -118,7 +118,16 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -128,6 +137,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -139,15 +152,6 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
@@ -163,6 +167,20 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -174,59 +192,68 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {
-  Action,
-  Reducer,
-  ReducersMapObject,
-  combineReducers,
+   Action,
+   Reducer,
+   ReducersMapObject,
+   combineReducers,
 } from '@reduxjs/toolkit';
-import { ReducerManager, StateSchema, StateSchemaKey } from './StateSchema';
-&nbsp;
+import {
+   MountedReducers,
+   ReducerManager,
+   StateSchema,
+   StateSchemaKey,
+} from './StateSchema';
 &nbsp;
 export function createReducerManager(
-  initialReducers: ReducersMapObject&lt;StateSchema&gt;,
+   initialReducers: ReducersMapObject&lt;StateSchema&gt;,
 ): ReducerManager {
-  const reducers = { ...initialReducers };
+   const reducers = { ...initialReducers };
 &nbsp;
-  let combinedReducer = combineReducers(reducers);
+   let combinedReducer = combineReducers(reducers);
 &nbsp;
-  let keysToRemove: Array&lt;StateSchemaKey&gt; = [];
+   let keysToRemove: Array&lt;StateSchemaKey&gt; = [];
 &nbsp;
-  return {
-    getReducerMap: <span class="fstat-no" title="function not covered" >() =&gt; reducers,</span>
+   const MountedReducers: MountedReducers = {};
 &nbsp;
-    reduce: (state: DeepPartial&lt;StateSchema&gt;, action: Action) =&gt; {
-      if (keysToRemove.length &gt; 0) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >        state = { ...state };</span>
-<span class="cstat-no" title="statement not covered" >        keysToRemove.forEach((key) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >          delete state[key];</span>
-<span class="cstat-no" title="statement not covered" >        });</span>
+   return {
+      getReducerMap: <span class="fstat-no" title="function not covered" >() =&gt; reducers,</span>
+      getMountedReducers: <span class="fstat-no" title="function not covered" >() =&gt; MountedReducers,</span>
+&nbsp;
+      reduce: (state: DeepPartial&lt;StateSchema&gt;, action: Action) =&gt; {
+         if (keysToRemove.length &gt; 0) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >            state = { ...state };</span>
+<span class="cstat-no" title="statement not covered" >            keysToRemove.forEach((key) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >               delete state[key];</span>
+<span class="cstat-no" title="statement not covered" >            });</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        keysToRemove = [];</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
-      // @ts-ignore
-      return combinedReducer(state, action);
-    },
+<span class="cstat-no" title="statement not covered" >            keysToRemove = [];</span>
+<span class="cstat-no" title="statement not covered" >         }</span>
+         // @ts-ignore
+         return combinedReducer(state, action);
+      },
 &nbsp;
-    add: <span class="fstat-no" title="function not covered" >(key: StateSchemaKey, reducer: Reducer) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (!key || reducers[key]) {</span>
-<span class="cstat-no" title="statement not covered" >        return;</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
+      add: <span class="fstat-no" title="function not covered" >(key: StateSchemaKey, reducer: Reducer) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >         if (!key || reducers[key]) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="cstat-no" title="statement not covered" >         }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >      reducers[key] = reducer;</span>
+<span class="cstat-no" title="statement not covered" >         reducers[key] = reducer;</span>
+<span class="cstat-no" title="statement not covered" >         MountedReducers[key] = true;</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >      combinedReducer = combineReducers(reducers);</span>
-    },
+<span class="cstat-no" title="statement not covered" >         combinedReducer = combineReducers(reducers);</span>
+      },
 &nbsp;
-    remove: <span class="fstat-no" title="function not covered" >(key: StateSchemaKey) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (!key || !reducers[key]) {</span>
-<span class="cstat-no" title="statement not covered" >        return;</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
+      remove: <span class="fstat-no" title="function not covered" >(key: StateSchemaKey) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >         if (!key || !reducers[key]) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="cstat-no" title="statement not covered" >         }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >      delete reducers[key];</span>
-<span class="cstat-no" title="statement not covered" >      keysToRemove.push(key);</span>
-<span class="cstat-no" title="statement not covered" >      combinedReducer = combineReducers(reducers);</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-  };
+<span class="cstat-no" title="statement not covered" >         delete reducers[key];</span>
+<span class="cstat-no" title="statement not covered" >         keysToRemove.push(key);</span>
+<span class="cstat-no" title="statement not covered" >         MountedReducers[key] = false;</span>
+<span class="cstat-no" title="statement not covered" >         combinedReducer = combineReducers(reducers);</span>
+<span class="cstat-no" title="statement not covered" >      },</span>
+   };
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -235,7 +262,7 @@ export function createReducerManager(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-01T12:36:16.003Z
+                at 2024-02-16T07:00:53.331Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

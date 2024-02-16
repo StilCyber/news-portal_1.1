@@ -61,6 +61,7 @@
     "babel-plugin-i18next-extract": "^0.10.0",
     "chromatic": "^10.2.0",
     "concurrently": "^8.2.2",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.8.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -106,7 +107,8 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.0",
     "react-redux": "^9.1.0",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "react-virtualized": "^9.22.5"
   },
   "readme": "ERROR: No README data found!",
   "_id": "production-project@1.0.0"

@@ -42,7 +42,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
    const articles = useSelector(getArticles.selectAll);
    const isLoading = useSelector(getArticlesPageIsLoading);
    const view = useSelector(getArticlesPageView);
-   const inited = useSelector(getArticlesPageInited);
    const [searchParams] = useSearchParams()
 
 

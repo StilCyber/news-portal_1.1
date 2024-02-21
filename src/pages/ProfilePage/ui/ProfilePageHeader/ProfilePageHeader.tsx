@@ -12,7 +12,8 @@ import {
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'Entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
+
 
 interface ProfilePageHeaderProps {
    className?: string;
@@ -41,38 +42,32 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
    }, [dispatch]);
 
    return (
-      <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+      <HStack justify="between" className={classNames('', {}, [className])}>
          <Text title={t('Profile')} />
          {canEdit && (
-            <div className={cls.btnsWrapper}>
+            <div>
                {readonly ? (
                   <Button
                      theme={ThemeButton.OUTLINE}
-                     className={cls.editBtn}
                      onClick={onEdit}
                   >
                      {t('Edit profile')}
                   </Button>
                ) : (
-                  <>
+                  <HStack gap="8">
                      <Button
                         theme={ThemeButton.OUTLINE_RED}
-                        className={cls.editBtn}
                         onClick={onCanselEdit}
                      >
                         {t('Cancel')}
                      </Button>
-                     <Button
-                        theme={ThemeButton.OUTLINE}
-                        className={cls.saveBtn}
-                        onClick={onSave}
-                     >
+                     <Button theme={ThemeButton.OUTLINE} onClick={onSave}>
                         {t('Save')}
                      </Button>
-                  </>
+                  </HStack>
                )}
             </div>
          )}
-      </div>
+      </HStack>
    );
 };

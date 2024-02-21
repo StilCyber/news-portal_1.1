@@ -1,4 +1,3 @@
-import React, { Profiler } from 'react';
 import { RouteProps } from 'react-router-dom';
 import { MainPage } from 'pages/MainPage';
 import { AboutPage } from 'pages/AboutPage';
@@ -20,7 +19,6 @@ export enum AppRoutes {
    ARTICLE_DETAILS = 'article_details',
    ARTICLE_CREATE = 'article_create',
    ARTICLE_EDIT = 'article_edit',
-
    // last
    NOT_FOUND = 'not_found',
 }
@@ -69,11 +67,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
    },
 
    [AppRoutes.ARTICLE_EDIT]: {
-      path: `${RoutePath.article_details}`,
+      path: `${RoutePath.article_edit}`,
       element: <ArticleEditPage />,
       authOnly: true,
    },
-
 
    // last
    [AppRoutes.NOT_FOUND]: {

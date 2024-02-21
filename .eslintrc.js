@@ -18,7 +18,13 @@ module.exports = {
       ecmaVersion: 'latest',
       sourceType: 'module',
    },
-   plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+   plugins: [
+      'react',
+      '@typescript-eslint',
+      'i18next',
+      'react-hooks',
+      'ulbi-tv-plugin',
+   ],
    rules: {
       'react/jsx-filename-extension': [
          2,
@@ -39,7 +45,20 @@ module.exports = {
       'no-underscore-dangle': 'off',
       'i18next/no-literal-string': [
          'error',
-         { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'target'] },
+         {
+            markupOnly: true,
+            ignoreAttribute: [
+               'data-testid',
+               'to',
+               'target',
+               'justify',
+               'align',
+               'direction',
+               'gap',
+               'role',
+               'as',
+            ],
+         },
       ],
       'max-len': ['error', { ignoreComments: true, code: 120 }],
       'react-hooks/exhaustive-deps': [
@@ -51,6 +70,7 @@ module.exports = {
       'no-param-reassign': 'off',
       'no-undef': 'off',
       'react/no-array-index-key': 'off',
+      'ulbi-tv-plugin/path-checker': 'error',
    },
    globals: {
       __IS_DEV__: true,

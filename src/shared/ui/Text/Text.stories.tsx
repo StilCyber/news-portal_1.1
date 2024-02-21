@@ -160,3 +160,42 @@ export const SizeMOrange: Story = {
       ),
    ],
 };
+
+///
+export const SizeS: Story = {
+   args: {
+      title: 'Some title',
+      text: 'Description',
+      size: TextSize.S,
+   },
+};
+
+export const SizeSDark: Story = {
+   args: {
+      title: 'Some title',
+      text: 'Description',
+      size: TextSize.S,
+   },
+   decorators: [
+      (Story) => (
+         <ThemeDecorator theme={Theme.DARK}>
+            <Story />
+         </ThemeDecorator>
+      ),
+   ],
+};
+
+export const SizeSOrange: Story = {
+   args: {
+      title: 'Some title',
+      text: 'Description',
+      size: TextSize.S,
+   },
+   decorators: [
+      (Story) => (
+         <ThemeDecorator theme={Theme.ORANGE}>
+            <Story />
+         </ThemeDecorator>
+      ),
+   ],
+};

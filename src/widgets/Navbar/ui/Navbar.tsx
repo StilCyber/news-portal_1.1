@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
@@ -37,6 +37,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
    if (authData) {
       return (
          <header>
+            <Text
+               title={t('Stil TV App')}
+               theme={TextTheme.INVERTED}
+               className={cls.appName}
+            />
             <Button
                theme={ThemeButton.OUTLINE}
                className={cls.links}
@@ -44,20 +49,19 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             >
                {t('Выйти')}
             </Button>
+            <AppLink
+               to={RoutePath.article_create}
+               theme={AppLinkTheme.SECONDARY}
+               className={cls.createBtn}
+            >
+               {t('Создать статью')}
+            </AppLink>
          </header>
       );
    }
 
    return (
       <header className={classNames(cls.Navbar, {}, [className])}>
-         <Text
-            title={t('Stil TV App')}
-            theme={TextTheme.INVERTED}
-            className={cls.appName}
-         />
-         <AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY} className={cls.createBtn}>
-            {t('Создать статью')}
-         </AppLink>
          <Button
             theme={ThemeButton.OUTLINE}
             className={cls.links}

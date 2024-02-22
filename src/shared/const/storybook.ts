@@ -12,3 +12,9 @@ export const tabs = [
       content: 'tab 3',
    },
 ];
+
+export const items = [
+   { content: 'asdf', value: '123' },
+   { content: 'asdfas', value: '456' },
+   { content: 'asdfasdf', value: '789' },
+];

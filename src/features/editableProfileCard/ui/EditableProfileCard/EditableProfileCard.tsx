@@ -21,7 +21,6 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
-import cls from './EditableProfileCard.module.scss';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 interface EditableProfileCardProps {
@@ -123,7 +122,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
    return (
       <DynamicModuleLoader reducers={reducers}>
          <VStack
-            className={classNames(cls.EditableProfileCard, {}, [className])}
+            className={classNames('', {}, [className])}
          >
             <EditableProfileCardHeader />
             {validateErrors?.length &&

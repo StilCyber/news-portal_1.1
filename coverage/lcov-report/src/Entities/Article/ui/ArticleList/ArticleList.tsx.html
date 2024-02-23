@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">34.42% </span>
+                <span class="strong">32.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/61</span>
+                <span class='fraction'>21/65</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">34.42% </span>
+                <span class="strong">32.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/61</span>
+                <span class='fraction'>21/65</span>
             </div>
         
             
@@ -124,7 +124,11 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -146,9 +150,13 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -195,56 +203,60 @@ import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
 &nbsp;
 interface ArticleListProps {
-    className?: string;
-    articles: Article[]
-    isLoading?: boolean;
-    target?: HTMLAttributeAnchorTarget;
-    view?: ArticleView;
+   className?: string;
+   articles: Article[];
+   isLoading?: boolean;
+   target?: HTMLAttributeAnchorTarget;
+   view?: ArticleView;
 }
 &nbsp;
-const getSkeletons = <span class="fstat-no" title="function not covered" >(view: ArticleView) =&gt; new Array(view === ArticleView.SMALL ? 9 : 3)</span>
-<span class="cstat-no" title="statement not covered" >    .fill(0)</span>
-<span class="cstat-no" title="statement not covered" >    .map((item, index) =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >        &lt;ArticleListItemSkeleton className={cls.card} key={index} view={view} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >    ));</span>
+const getSkeletons = <span class="fstat-no" title="function not covered" >(view: ArticleView) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >   new Array(view === ArticleView.SMALL ? 9 : 3)</span>
+<span class="cstat-no" title="statement not covered" >      .fill(0)</span>
+<span class="cstat-no" title="statement not covered" >      .map((item, index) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >         &lt;ArticleListItemSkeleton</span>
+<span class="cstat-no" title="statement not covered" >            className={cls.card}</span>
+<span class="cstat-no" title="statement not covered" >            key={index}</span>
+<span class="cstat-no" title="statement not covered" >            view={view}</span>
+<span class="cstat-no" title="statement not covered" >         /&gt;</span>
+<span class="cstat-no" title="statement not covered" >      ));</span>
 &nbsp;
 export const ArticleList = memo((props: ArticleListProps) =&gt; {
-<span class="cstat-no" title="statement not covered" >    const {</span>
-<span class="cstat-no" title="statement not covered" >        className,</span>
-<span class="cstat-no" title="statement not covered" >        articles,</span>
-<span class="cstat-no" title="statement not covered" >        view = ArticleView.SMALL,</span>
-<span class="cstat-no" title="statement not covered" >        isLoading,</span>
-<span class="cstat-no" title="statement not covered" >        target,</span>
-<span class="cstat-no" title="statement not covered" >    } = props;</span>
-<span class="cstat-no" title="statement not covered" >    const { t } = useTranslation();</span>
+<span class="cstat-no" title="statement not covered" >   const {</span>
+<span class="cstat-no" title="statement not covered" >      className,</span>
+<span class="cstat-no" title="statement not covered" >      articles,</span>
+<span class="cstat-no" title="statement not covered" >      view = ArticleView.SMALL,</span>
+<span class="cstat-no" title="statement not covered" >      isLoading,</span>
+<span class="cstat-no" title="statement not covered" >      target,</span>
+<span class="cstat-no" title="statement not covered" >   } = props;</span>
+<span class="cstat-no" title="statement not covered" >   const { t } = useTranslation();</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const renderArticle = (article: Article) =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >        &lt;ArticleListItem</span>
-<span class="cstat-no" title="statement not covered" >            article={article}</span>
-<span class="cstat-no" title="statement not covered" >            view={view}</span>
-<span class="cstat-no" title="statement not covered" >            className={cls.card}</span>
-<span class="cstat-no" title="statement not covered" >            key={article.id}</span>
-<span class="cstat-no" title="statement not covered" >            target={target}</span>
+<span class="cstat-no" title="statement not covered" >   const renderArticle = (article: Article) =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >      &lt;ArticleListItem</span>
+<span class="cstat-no" title="statement not covered" >         article={article}</span>
+<span class="cstat-no" title="statement not covered" >         view={view}</span>
+<span class="cstat-no" title="statement not covered" >         className={cls.card}</span>
+<span class="cstat-no" title="statement not covered" >         key={article.id}</span>
+<span class="cstat-no" title="statement not covered" >         target={target}</span>
+<span class="cstat-no" title="statement not covered" >      /&gt;</span>
+<span class="cstat-no" title="statement not covered" >   );</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        /&gt;</span>
-<span class="cstat-no" title="statement not covered" >    );</span>
+<span class="cstat-no" title="statement not covered" >   if (!isLoading &amp;&amp; !articles.length) {</span>
+<span class="cstat-no" title="statement not covered" >      return (</span>
+<span class="cstat-no" title="statement not covered" >         &lt;div</span>
+<span class="cstat-no" title="statement not covered" >            className={classNames(cls.ArticleList, {}, [className, cls[view]])}</span>
+<span class="cstat-no" title="statement not covered" >         &gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;Text size={TextSize.L} title={t('Статьи не найдены')} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >         &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >      );</span>
+<span class="cstat-no" title="statement not covered" >   }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    if (!isLoading &amp;&amp; !articles.length) {</span>
-<span class="cstat-no" title="statement not covered" >        return (</span>
-<span class="cstat-no" title="statement not covered" >            &lt;div className={classNames(cls.ArticleList, {}, [className, cls[view]])}&gt;</span>
-<span class="cstat-no" title="statement not covered" >                &lt;Text size={TextSize.L} title={t('Статьи не найдены')} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        );</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return (</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className={classNames(cls.ArticleList, {}, [className, cls[view]])}&gt;</span>
-<span class="cstat-no" title="statement not covered" >            {articles.length &gt; 0</span>
-<span class="cstat-no" title="statement not covered" >                ? articles.map(renderArticle)</span>
-<span class="cstat-no" title="statement not covered" >                : null}</span>
-<span class="cstat-no" title="statement not covered" >            {isLoading &amp;&amp; getSkeletons(view)}</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >    );</span>
+<span class="cstat-no" title="statement not covered" >   return (</span>
+<span class="cstat-no" title="statement not covered" >      &lt;div className={classNames(cls.ArticleList, {}, [className, cls[view]])}&gt;</span>
+<span class="cstat-no" title="statement not covered" >         {articles.length &gt; 0 ? articles.map(renderArticle) : null}</span>
+<span class="cstat-no" title="statement not covered" >         {isLoading &amp;&amp; getSkeletons(view)}</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >   );</span>
 });
 &nbsp;</pre></td></tr></table></pre>
 
@@ -253,7 +265,7 @@ export const ArticleList = memo((props: ArticleListProps) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-16T07:03:08.952Z
+                at 2024-02-23T14:56:20.465Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

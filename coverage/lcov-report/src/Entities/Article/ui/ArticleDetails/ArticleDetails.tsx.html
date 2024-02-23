@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.26% </span>
+                <span class="strong">28.16% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>39/138</span>
+                <span class='fraction'>40/142</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.26% </span>
+                <span class="strong">28.16% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>39/138</span>
+                <span class='fraction'>40/142</span>
             </div>
         
             
@@ -201,7 +201,11 @@
 <a name='L136'></a><a href='#L136'>136</a>
 <a name='L137'></a><a href='#L137'>137</a>
 <a name='L138'></a><a href='#L138'>138</a>
-<a name='L139'></a><a href='#L139'>139</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -239,6 +243,10 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -355,6 +363,7 @@ import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Icon } from 'shared/ui/Icon/Icon';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import cls from './ArticleDetails.module.scss';
 import {
@@ -448,24 +457,25 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) =&gt; {
 <span class="cstat-no" title="statement not covered" >   } else {</span>
 <span class="cstat-no" title="statement not covered" >      content = (</span>
 <span class="cstat-no" title="statement not covered" >         &lt;&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;div className={cls.avatarWrapper}&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;HStack justify="center" max&gt;</span>
 <span class="cstat-no" title="statement not covered" >               &lt;Avatar size={200} src={article?.img} className={cls.avatar} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >            &lt;Text</span>
-<span class="cstat-no" title="statement not covered" >               title={article?.title}</span>
-<span class="cstat-no" title="statement not covered" >               text={article?.subtitle}</span>
-<span class="cstat-no" title="statement not covered" >               className={cls.title}</span>
-<span class="cstat-no" title="statement not covered" >               size={TextSize.L}</span>
-<span class="cstat-no" title="statement not covered" >            /&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;div className={cls.articleInfo}&gt;</span>
-<span class="cstat-no" title="statement not covered" >               &lt;Icon Svg={EyeIcon} className={cls.icon} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >               &lt;Text text={String(article?.views)} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;div className={cls.articleInfo}&gt;</span>
-<span class="cstat-no" title="statement not covered" >               &lt;Icon Svg={CalendarIcon} className={cls.icon} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >               &lt;Text text={article?.createdAt} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/HStack&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;VStack gap="4" max&gt;</span>
+<span class="cstat-no" title="statement not covered" >               &lt;Text</span>
+<span class="cstat-no" title="statement not covered" >                  title={article?.title}</span>
+<span class="cstat-no" title="statement not covered" >                  text={article?.subtitle}</span>
+<span class="cstat-no" title="statement not covered" >                  className={cls.title}</span>
+<span class="cstat-no" title="statement not covered" >                  size={TextSize.L}</span>
+<span class="cstat-no" title="statement not covered" >               /&gt;</span>
+<span class="cstat-no" title="statement not covered" >               &lt;HStack gap="8"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;Icon Svg={EyeIcon} className={cls.icon} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;Text text={String(article?.views)} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >               &lt;/HStack&gt;</span>
+<span class="cstat-no" title="statement not covered" >               &lt;HStack gap="8"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;Icon Svg={CalendarIcon} className={cls.icon} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                  &lt;Text text={article?.createdAt} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >               &lt;/HStack&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/VStack&gt;</span>
 <span class="cstat-no" title="statement not covered" >            {article?.blocks.map(renderBlock)}</span>
 <span class="cstat-no" title="statement not covered" >         &lt;/&gt;</span>
 <span class="cstat-no" title="statement not covered" >      );</span>
@@ -473,7 +483,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) =&gt; {
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >   return (</span>
 <span class="cstat-no" title="statement not covered" >      &lt;DynamicModuleLoader reducers={reducers} removeAfterUnmount&gt;</span>
-<span class="cstat-no" title="statement not covered" >         {content}</span>
+<span class="cstat-no" title="statement not covered" >         &lt;VStack gap="16" className={cls.ArticleDetails}&gt;</span>
+<span class="cstat-no" title="statement not covered" >            {content}</span>
+<span class="cstat-no" title="statement not covered" >         &lt;/VStack&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;/DynamicModuleLoader&gt;</span>
 <span class="cstat-no" title="statement not covered" >   );</span>
 });
@@ -484,7 +496,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-16T07:03:08.952Z
+                at 2024-02-23T14:56:20.465Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

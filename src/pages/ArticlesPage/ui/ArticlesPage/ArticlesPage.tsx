@@ -18,14 +18,10 @@ import {
    articlesPageReducer,
    getArticles,
 } from '../../model/slice/articlesPageSlice';
-import {
-   getArticlesPageInited,
-   getArticlesPageIsLoading,
-   getArticlesPageView,
-} from '../../model/selectors/articlesPageSelectors';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 interface ArticlesPageProps {
    className?: string;
@@ -37,13 +33,8 @@ const reducers: ReducersList = {
 
 const ArticlesPage = (props: ArticlesPageProps) => {
    const { className } = props;
-   const { t } = useTranslation('article');
    const dispatch = useAppDispatch();
-   const articles = useSelector(getArticles.selectAll);
-   const isLoading = useSelector(getArticlesPageIsLoading);
-   const view = useSelector(getArticlesPageView);
-   const [searchParams] = useSearchParams()
-
+   const [searchParams] = useSearchParams();
 
    const onLoadNextPart = useCallback(() => {
       dispatch(fetchNextArticlesPage());
@@ -60,13 +51,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
             onScrollEnd={onLoadNextPart}
          >
             <ArticlesPageFilters />
-            <ArticleList
-               isLoading={isLoading}
-               articles={articles as Article[]}
-               view={view}
-               className={cls.list}
-               target='_blank'
-            />
+            <ArticleInfiniteList className={cls.list} />
          </Page>
       </DynamicModuleLoader>
    );

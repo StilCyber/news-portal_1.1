@@ -1,8 +1,8 @@
 import { articleDetailsReducer } from 'Entities/Article/model/slice/articleDetailsSlice';
-import { profileReducer } from 'Entities/Profile';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import 'app/styles/index.scss';
 import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { profileReducer } from 'features/editableProfileCard/model/slice/profileSlice';
 import { articleDetailsPageReducer } from 'pages/ArticlesPage';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
 import { ReactNode } from 'react';

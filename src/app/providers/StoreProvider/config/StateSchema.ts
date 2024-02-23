@@ -6,18 +6,22 @@ import {
    ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { ArticleDetailsSchema } from 'Entities/Article';
-import { ProfileSchema } from 'Entities/Profile';
 import { UserSchema } from 'Entities/User';
 import { AxiosInstance } from 'axios';
 import { LoginSchema } from 'features/AuthByUsername';
 import { UISchema } from 'features/UI';
 import { AddCommentFormSchema } from 'features/addCommentForm';
+import { ProfileSchema } from 'features/editableProfileCard';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
    user: UserSchema;
    ui: UISchema;
+   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
+
+   // async reducers
    loginForm?: LoginSchema;
    profile?: ProfileSchema;
    articleDetails?: ArticleDetailsSchema;

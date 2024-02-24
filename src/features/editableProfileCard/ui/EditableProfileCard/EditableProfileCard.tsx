@@ -15,7 +15,7 @@ import { ProfileCard } from 'Entities/Profile';
 import { VStack } from 'shared/ui/Stack';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
-import { ValidateProfileErrors } from '../../model/types/editableProfileCardSchema';
+import { ValidateProfileErrors } from '../../model/consts/consts';
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
@@ -121,9 +121,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
    return (
       <DynamicModuleLoader reducers={reducers}>
-         <VStack
-            className={classNames('', {}, [className])}
-         >
+         <VStack className={classNames('', {}, [className])}>
             <EditableProfileCardHeader />
             {validateErrors?.length &&
                validateErrors.map((err: ValidateProfileErrors) => (
@@ -131,6 +129,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                      theme={TextTheme.ERROR}
                      text={validateErrorTranslates[err]}
                      key={err}
+                     data-testid="EditableProfileCard.Error"
                   />
                ))}
             <ProfileCard

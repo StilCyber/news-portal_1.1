@@ -3,10 +3,7 @@ import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { Theme } from 'app/providers/ThemeProvider';
 import StoreDecorator from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { StateSchema } from 'app/providers/StoreProvider';
-import {
-   ArticleBlockType,
-   ArticleType,
-} from '../../model/types/article';
+import { ArticleType, ArticleBlockType } from 'Entities/Article';
 import { ArticleDetails } from './ArticleDetails';
 
 const meta: Meta<typeof ArticleDetails> = {
@@ -33,7 +30,8 @@ const state: DeepPartial<StateSchema> = {
          user: {
             id: '1',
             username: 'Stil',
-            avatar: 'https://i.pinimg.com/736x/5d/71/5d/5d715dff6bce6937722a6d26888d5d62.jpg',
+            avatar:
+               'https://i.pinimg.com/736x/5d/71/5d/5d715dff6bce6937722a6d26888d5d62.jpg',
          },
          type: [ArticleType.IT],
          blocks: [

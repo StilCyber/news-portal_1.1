@@ -16,7 +16,9 @@ interface EditableProfileCardHeaderProps {
    className?: string;
 }
 
-export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps) => {
+export const EditableProfileCardHeader = (
+   props: EditableProfileCardHeaderProps,
+) => {
    const { className } = props;
    const { t } = useTranslation('profile');
    const authData = useSelector(getUserAuthData);
@@ -44,7 +46,11 @@ export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps)
          {canEdit && (
             <div>
                {readonly ? (
-                  <Button theme={ThemeButton.OUTLINE} onClick={onEdit}>
+                  <Button
+                     theme={ThemeButton.OUTLINE}
+                     onClick={onEdit}
+                     data-testid="EditableProfileCardHeader.EditButton"
+                  >
                      {t('Edit profile')}
                   </Button>
                ) : (
@@ -52,10 +58,15 @@ export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps)
                      <Button
                         theme={ThemeButton.OUTLINE_RED}
                         onClick={onCanselEdit}
+                        data-testid="EditableProfileCardHeader.CancelButton"
                      >
                         {t('Cancel')}
                      </Button>
-                     <Button theme={ThemeButton.OUTLINE} onClick={onSave}>
+                     <Button
+                        theme={ThemeButton.OUTLINE}
+                        onClick={onSave}
+                        data-testid="EditableProfileCardHeader.SaveButton"
+                     >
                         {t('Save')}
                      </Button>
                   </HStack>

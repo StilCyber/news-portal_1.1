@@ -7,23 +7,21 @@ import { Card } from 'shared/ui/Card/Card';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
-
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import cls from './ArticleListItem.module.scss';
-import {
-   Article,
-   ArticleBlockType,
-   ArticleTextBlock,
-   ArticleView,
-} from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import {
+   ArticleView,
+   ArticleBlockType,
+} from '../../model/consts/constsArticle';
 
 interface ArticleListItemProps {
    className?: string;
    article: Article;
    view: ArticleView;
-   target?: HTMLAttributeAnchorTarget
+   target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {

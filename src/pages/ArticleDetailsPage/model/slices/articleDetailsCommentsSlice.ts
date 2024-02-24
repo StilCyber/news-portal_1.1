@@ -4,7 +4,7 @@ import {
    createSlice,
 } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Comment } from 'Entities/comment';
+import { Comment } from 'Entities/Comment';
 import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
@@ -34,7 +34,6 @@ const articleDetailsCommentsSlice = createSlice({
                state.isLoading = false;
                articleDetailsCommentsAdapter.upsertMany(state, action.payload);
             },
-
          )
          .addCase(fetchCommentsByArticleId.rejected, (state, action) => {
             state.isLoading = false;
@@ -45,7 +44,8 @@ const articleDetailsCommentsSlice = createSlice({
 
 export const { selectAll, selectEntities } =
    articleDetailsCommentsAdapter.getSelectors<StateSchema>(
-      (state: StateSchema) => state.articleDetailsPage?.comments|| initialState,
+      (state: StateSchema) =>
+         state.articleDetailsPage?.comments || initialState,
    );
 
 export const { actions: articleDetailsCommentsActions } =

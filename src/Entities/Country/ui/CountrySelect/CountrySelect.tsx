@@ -1,14 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ListBox } from 'shared/ui/ListBox/ListBox';
-import { Country } from '../../model/types/country';
-
+import { Country } from 'Entities/Country/model/consts/constsCountry';
 
 interface CountrySelectProps {
-    className?: string;
-    value?: Country;
-    onChange?: (value: Country) => void;
-    readonly?: boolean;
+   className?: string;
+   value?: Country;
+   onChange?: (value: Country) => void;
+   readonly?: boolean;
 }
 
 const options = [
@@ -18,17 +17,19 @@ const options = [
    { value: Country.Kazakhstan, content: Country.Kazakhstan },
 ];
 
-export const CountrySelect = memo(({
-    className, value, onChange, readonly,
-}: CountrySelectProps) => {
-    const { t } = useTranslation('profile');
+export const CountrySelect = memo(
+   ({ className, value, onChange, readonly }: CountrySelectProps) => {
+      const { t } = useTranslation('profile');
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Country);
-    }, [onChange]);
+      const onChangeHandler = useCallback(
+         (value: string) => {
+            onChange?.(value as Country);
+         },
+         [onChange],
+      );
 
-    return (
-        <ListBox
+      return (
+         <ListBox
             onChange={onChangeHandler}
             value={value}
             defaultValue={t('Select a country')}
@@ -36,6 +37,7 @@ export const CountrySelect = memo(({
             items={options}
             readonly={readonly}
             direction="top right"
-        />
-    );
-});
+         />
+      );
+   },
+);

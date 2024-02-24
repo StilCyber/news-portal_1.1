@@ -1,7 +1,7 @@
 import { Country } from 'Entities/Country';
 import { Currency } from 'Entities/Currency';
 import { validateProfileData } from './validateProfileData';
-import { ValidateProfileErrors } from '../../types/editableProfileCardSchema';
+import { ValidateProfileErrors } from '../../consts/consts';
 
 const data = {
    username: 'admin',
@@ -10,7 +10,7 @@ const data = {
    first: 'Stil',
    city: 'afd',
    country: Country.Netherlands,
-   currency: Currency.EUR
+   currency: Currency.EUR,
 };
 
 describe('validateProfileData.test', () => {
@@ -42,9 +42,9 @@ describe('validateProfileData.test', () => {
       const result = validateProfileData({});
 
       expect(result).toEqual([
-        ValidateProfileErrors.INCORRECT_USER_DATA,
-        ValidateProfileErrors.INCORRECT_AGE,
-        ValidateProfileErrors.INCORRECT_COUNTRY
+         ValidateProfileErrors.INCORRECT_USER_DATA,
+         ValidateProfileErrors.INCORRECT_AGE,
+         ValidateProfileErrors.INCORRECT_COUNTRY,
       ]);
    });
 });

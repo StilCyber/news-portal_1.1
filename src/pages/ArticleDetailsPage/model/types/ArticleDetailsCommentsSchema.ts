@@ -1,5 +1,5 @@
 import { EntityState } from '@reduxjs/toolkit';
-import { Comment } from 'Entities/comment/model/types/comments';
+import { Comment } from 'Entities/Comment/model/types/comments';
 
 type Id = number | string;
 
@@ -9,4 +9,3 @@ export interface ArticleDetailsCommentsSchema {
    ids: Id[];
    entities: Record<Id, Comment>;
 }
-

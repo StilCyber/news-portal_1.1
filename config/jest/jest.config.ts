@@ -28,6 +28,18 @@ const config: Config = {
    },
    modulePaths: ['<rootDir>src'],
    testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
+   reporters: [
+      'default',
+      [
+         'jest-html-reporters',
+         {
+            publicPath: '<rootDir>/reports/unit',
+            filename: 'report.html',
+            openReport: true,
+            inlineSource: true,
+         },
+      ],
+   ],
 
    // The number of seconds after which a test is considered as slow and reported as such in the results.
    // slowTestThreshold: 5,

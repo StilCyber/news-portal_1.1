@@ -14,7 +14,7 @@ export function createReduxStore(
       ...asyncReducers,
       user: userReducer,
       ui: UIReducer,
-      [rtkApi.reducerPath]: rtkApi.reducer
+      [rtkApi.reducerPath]: rtkApi.reducer,
    };
 
    const reducerManager = createReducerManager(rootReducer);
@@ -33,7 +33,7 @@ export function createReduxStore(
             thunk: {
                extraArgument: extraArg,
             },
-         }).concat(rtkApi.middleware)
+         }).concat(rtkApi.middleware),
    });
 
    // @ts-ignore

@@ -1,5 +1,5 @@
-import { ArticleSortField, ArticleType, ArticleView } from 'Entities/Article';
-import { SortOrder } from 'shared/types';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
+import { SortOrder } from '@/shared/types';
 
 export interface ArticlesPageSchema {
    isLoading?: boolean;
@@ -18,5 +18,5 @@ export interface ArticlesPageSchema {
    order: SortOrder;
    sort: ArticleSortField;
    search: string;
-   type: ArticleType
+   type: ArticleType;
 }

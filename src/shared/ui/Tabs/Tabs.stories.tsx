@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { tabs } from 'shared/const/storybook';
 import { action } from '@storybook/addon-actions';
+import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { tabs } from '@/shared/const/storybook';
 import { Tabs } from './Tabs';
 
 const meta: Meta<typeof Tabs> = {

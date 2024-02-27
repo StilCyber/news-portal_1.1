@@ -1,8 +1,6 @@
-import { Theme, ThemeProvider } from 'app/providers/ThemeProvider';
-import { ThemeContextProps } from 'app/providers/ThemeProvider/lib/ThemeContext';
-import 'app/styles/index.scss';
-import React from 'react';
-
+import { Theme, ThemeProvider } from '@/app/providers/ThemeProvider';
+import { ThemeContextProps } from '@/app/providers/ThemeProvider/lib/ThemeContext';
+import '@/app/styles/index.scss';
 
 const ThemeDecorator = (props: ThemeContextProps) => {
   const { children, theme } = props;

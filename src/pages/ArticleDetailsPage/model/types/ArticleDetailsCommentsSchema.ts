@@ -1,5 +1,5 @@
 import { EntityState } from '@reduxjs/toolkit';
-import { Comment } from 'Entities/Comment/model/types/comments';
+import { Comment } from '@/entities/Comment/model/types/comments';
 
 type Id = number | string;
 

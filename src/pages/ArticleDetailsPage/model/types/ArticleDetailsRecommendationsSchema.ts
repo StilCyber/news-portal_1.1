@@ -1,4 +1,4 @@
-import { Article } from 'Entities/Article';
+import { Article } from '@/entities/Article';
 
 type Id = number | string;
 

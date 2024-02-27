@@ -1,6 +1,6 @@
-import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { ChangeEvent, useMemo } from 'react';
-import { Currency } from 'Entities/Currency';
+import { Mods, classNames } from '@/shared/lib/classNames/classNames';
+import { Currency } from '@/entities/Currency';
 import cls from './Select.module.scss';
 
 export interface SelectOption<T extends string> {

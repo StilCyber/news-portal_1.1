@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
-import { ArticleType } from 'Entities/Article';
+import { ArticleType } from '@/entities/Article';
 import cls from './Tabs.module.scss';
 import { Card, CardTheme } from '../Card/Card';
 

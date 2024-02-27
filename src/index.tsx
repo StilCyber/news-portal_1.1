@@ -1,27 +1,28 @@
 import { createRoot } from 'react-dom/client';
-import { ThemeProvider } from 'app/providers/ThemeProvider';
-import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { BrowserRouter } from 'react-router-dom';
-import 'app/styles/index.scss';
-import { StoreProvider } from 'app/providers/StoreProvider';
+import { ThemeProvider } from '@/app/providers/ThemeProvider';
+import { StoreProvider } from '@/app/providers/StoreProvider';
 import App from './app/App';
+import '@/app/styles/index.scss';
 import './shared/config/i18n/i18n';
+import { ErrorBoundary } from './app/providers/ErrorBoundary';
 
-const root = document.getElementById('root');
-if (!root) {
-   throw new Error('root not found');
+const container = document.getElementById('root');
+
+if (!container) {
+    throw new Error('Контейнер root не найден. НЕ удалось вмонтировать реакт приложение');
 }
 
-const container = createRoot(root);
+const root = createRoot(container);
 
-container.render(
-   <ThemeProvider>
-      <BrowserRouter>
-         <StoreProvider>
+root.render(
+    <BrowserRouter>
+        <StoreProvider>
             <ErrorBoundary>
-               <App />
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
             </ErrorBoundary>
-         </StoreProvider>
-      </BrowserRouter>
-   </ThemeProvider>,
+        </StoreProvider>
+    </BrowserRouter>,
 );

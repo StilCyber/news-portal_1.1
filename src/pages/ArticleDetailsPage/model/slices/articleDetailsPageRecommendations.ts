@@ -3,8 +3,8 @@ import {
    createEntityAdapter,
    createSlice,
 } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider';
-import { Article } from 'Entities/Article';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { Article } from '@/entities/Article';
 import { ArticleDetailsRecommendationsSchema } from '../types/ArticleDetailsRecommendationsSchema';
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
 
@@ -52,7 +52,7 @@ export const articleDetailsPageRecommendationsSlice = createSlice({
 export const getArticleRecommendations =
    articleDetailsPageRecommendationsAdapter.getSelectors<StateSchema>(
       (state: StateSchema) =>
-         state.articleDetailsPage?.recommendations|| initialState,
+         state.articleDetailsPage?.recommendations || initialState,
    );
 
 export const { actions: ArticleDetailsPageRecommendationsActions } =

@@ -1,32 +1,19 @@
-module.exports = (layer, componentName) => `import type { Meta, StoryObj } from '@storybook/react';
-import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
+module.exports = (layer, componentName) => `import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
 import { ${componentName} } from './${componentName}';
 
-const meta: Meta<typeof ${componentName}> = {
+export default {
     title: '${layer}/${componentName}',
     component: ${componentName},
-    parameters: {},
-    tags: ['autodocs'],
-    argTypes: {},
-};
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ${componentName}>;
 
-export default meta;
+const Template: ComponentStory<typeof ${componentName}> = (args) => <${componentName} {...args} />;
 
-type Story = StoryObj<typeof ${componentName}>;
-
-export const Primary: Story = {
-   args: {},
-};
-
-export const PrimaryDark: Story = {
-   args: {},
-   decorators: [
-     (Story) => (
-        <ThemeDecorator theme={Theme.DARK}>
-           <Story />
-        </ThemeDecorator>
-     )
-  ],
-};
-`;
+export const Normal = Template.bind({});
+Normal.args = {
+   
+};`;

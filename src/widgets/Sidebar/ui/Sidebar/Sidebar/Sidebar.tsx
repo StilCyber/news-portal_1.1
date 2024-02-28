@@ -1,13 +1,13 @@
 import { memo, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher';
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher';
-import { Button, ButtonSize, ThemeButton } from '@/shared/ui/Button/Button';
+import { Button, ButtonSize, ThemeButton } from '@/shared/ui/Button';
 import { VStack } from '@/shared/ui/Stack';
 import { getSidebarItems } from '../../../model/selectors/getSidebarItems';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher';
+import { LangSwitcher } from '@/features/LangSwitcher';
 
 interface SidebarProps {
    className?: string;
@@ -46,7 +46,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
          >
             {collapsed ? '>' : '<'}
          </Button>
-         <VStack role='navigation' gap='8' className={cls.items}>
+         <VStack role="navigation" gap="8" className={cls.items}>
             {itemsList}
          </VStack>
          <div className={cls.switchers}>

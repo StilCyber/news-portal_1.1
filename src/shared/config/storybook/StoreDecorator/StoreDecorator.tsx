@@ -1,13 +1,12 @@
 import { ReactNode } from 'react';
-import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice';
+import { articleDetailsReducer } from '@/entities/Article/testing';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import '@/app/styles/index.scss';
-import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
-
-import { articlesPageReducer } from '@/pages/ArticlesPage/model/slice/articlesPageSlice';
+import { loginReducer } from '@/features/AuthByUsername/testing';
+import { profileReducer } from '@/features/editableProfileCard/testing';
 import { ReducersList } from '@/shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
-import { addCommentFormReducer } from '@/features/addCommentForm/model/slice/addCommentFormSlice';
+import { addCommentFormReducer } from '@/features/addCommentForm/testing';
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 
 interface StoreDecoratorProps {
    state?: DeepPartial<StateSchema>;
@@ -18,9 +17,9 @@ interface StoreDecoratorProps {
 const defaultAsyncReducers: ReducersList = {
    loginForm: loginReducer,
    profile: profileReducer,
-   articleDetails: articleDetailsReducer,
    addCommentForm: addCommentFormReducer,
-   articleDetailsPage: articleDetailsReducer,
+   articleDetails: articleDetailsReducer,
+   articleDetailsPage: articleDetailsPageReducer,
 };
 
 const StoreDecorator = (props: StoreDecoratorProps) => {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
 import { Avatar } from './Avatar';
 import AvatarImg from '../../assets/test/storybook.jpg';
 
@@ -18,8 +18,8 @@ type Story = StoryObj<typeof Avatar>;
 
 export const Primary: Story = {
    args: {
-    src: AvatarImg,
-    size: 150,
+      src: AvatarImg,
+      size: 150,
    },
 };
 
@@ -38,22 +38,22 @@ export const PrimaryDark: Story = {
 };
 
 export const PrimarySmall: Story = {
-    args: {
-     src: AvatarImg,
-     size: 50,
-    },
- };
- 
- export const PrimarySmallDark: Story = {
-    args: {
-       src: AvatarImg,
-       size: 50,
-    },
-    decorators: [
-       (Story) => (
-          <ThemeDecorator theme={Theme.DARK}>
-             <Story />
-          </ThemeDecorator>
-       ),
-    ],
- };
+   args: {
+      src: AvatarImg,
+      size: 50,
+   },
+};
+
+export const PrimarySmallDark: Story = {
+   args: {
+      src: AvatarImg,
+      size: 50,
+   },
+   decorators: [
+      (Story) => (
+         <ThemeDecorator theme={Theme.DARK}>
+            <Story />
+         </ThemeDecorator>
+      ),
+   ],
+};

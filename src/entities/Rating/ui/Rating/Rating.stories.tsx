@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/shared/const/theme';
 import { Rating } from './Rating';
 
 const meta: Meta<typeof Rating> = {
@@ -29,4 +29,3 @@ export const PrimaryDark: Story = {
       ),
    ],
 };
-

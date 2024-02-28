@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import ThemeDecorator from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
-import  ArticlesPage  from './ArticlesPage';
+import { Theme } from '@/shared/const/theme';
+import ArticlesPage from './ArticlesPage';
 
 const meta: Meta<typeof ArticlesPage> = {
    title: 'pages/ArticlesPage',
@@ -29,4 +29,3 @@ export const PrimaryDark: Story = {
       ),
    ],
 };
-

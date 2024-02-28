@@ -24,6 +24,7 @@ module.exports = {
       'i18next',
       'react-hooks',
       'ulbi-tv-plugin',
+      'unused-imports',
    ],
    rules: {
       'react/jsx-filename-extension': [
@@ -71,7 +72,33 @@ module.exports = {
       'no-param-reassign': 'off',
       'no-undef': 'off',
       'react/no-array-index-key': 'off',
-      'ulbi-tv-plugin/path-checker': 'error',
+
+      'unused-imports/no-unused-imports': 'error',
+
+      'ulbi-tv-plugin/path-checker': [
+         'error',
+         {
+            alias: '@',
+         },
+      ],
+      'ulbi-tv-plugin/layer-imports': [
+         'error',
+         {
+            alias: '@',
+            ignoreImportPatterns: [],
+         },
+      ],
+      'ulbi-tv-plugin/public-api-imports': [
+         'error',
+         {
+            alias: '@',
+            testFilesPatterns: [
+               '**/*.test.*',
+               '**/*.story.*',
+               '**/StoreDecorator.tsx',
+            ],
+         },
+      ],
    },
    globals: {
       __IS_DEV__: true,

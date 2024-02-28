@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { Currency } from '@/entities/Currency/model/consts/constsCurrency';
+import { Currency } from '../../model/consts/constsCurrency';
 import { ListBox } from '@/shared/ui/Popups';
 
 interface CurrencySelectProps {

@@ -7,7 +7,6 @@ import EyeIcon from '@/shared/assets/icons/eye-20-20.svg?react';
 import { Card } from '@/shared/ui/Card';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ThemeButton } from '@/shared/ui/Button';
-import { RoutePath } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink';
 import cls from './ArticleListItem.module.scss';
 import { Article, ArticleTextBlock } from '../../model/types/article';
@@ -16,6 +15,9 @@ import {
    ArticleView,
    ArticleBlockType,
 } from '../../model/consts/constsArticle';
+import { getRouteArticleDetails } from '@/shared/const/router';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
    className?: string;
@@ -51,7 +53,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                </div>
                <Text title={article.title} className={cls.title} />
                {types}
-               <img src={article.img} className={cls.img} alt={article.title} />
+               <AppImage
+                  src={article.img}
+                  className={cls.img}
+                  alt={article.title}
+                  fallback={<Skeleton width="100%" height={250} />}
+               />
                {textBlock && (
                   <ArticleTextBlockComponent
                      block={textBlock}
@@ -60,7 +67,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                )}
                <div className={cls.footer}>
                   <AppLink
-                     to={RoutePath.article_details + article.id}
+                     to={getRouteArticleDetails(article.id)}
                      target={target}
                   >
                      <Button theme={ThemeButton.OUTLINE}>
@@ -77,13 +84,18 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
    return (
       <AppLink
-         to={RoutePath.article_details + article.id}
+         to={getRouteArticleDetails(article.id)}
          className={classNames('', {}, [className, cls[view]])}
          target={target}
       >
          <Card className={cls.card}>
             <div className={cls.imageWrapper}>
-               <img src={article.img} className={cls.img} alt={article.title} />
+               <AppImage
+                  src={article.img}
+                  className={cls.img}
+                  alt={article.title}
+                  fallback={<Skeleton width="200" height={200} />}
+               />
                <Text text={article.createdAt} className={cls.date} />
             </div>
             <div className={cls.infoWrapper}>

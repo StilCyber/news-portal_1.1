@@ -1083,6 +1083,13 @@
       "articleId": "7",
       "rate": 2,
       "id": "DyD9Rm1"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 5,
+      "feedback": "",
+      "id": "Ug7Ktxo"
     }
   ],
   "profile-ratings": [

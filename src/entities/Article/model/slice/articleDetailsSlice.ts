@@ -35,5 +35,3 @@ export const articleDetailsSlice = createSlice({
 
 export const { actions: articleDetailsActions } = articleDetailsSlice;
 export const { reducer: articleDetailsReducer } = articleDetailsSlice;
-
-

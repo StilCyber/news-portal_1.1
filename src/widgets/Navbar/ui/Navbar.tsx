@@ -13,7 +13,6 @@ import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
 import { getRouteArticleCreate } from '@/shared/const/router';
 
-
 interface NavbarProps {
    className?: string;
 }

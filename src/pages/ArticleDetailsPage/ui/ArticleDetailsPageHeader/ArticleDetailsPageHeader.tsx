@@ -26,7 +26,7 @@ export const ArticleDetailsPageHeader = memo(
       }, [navigate]);
 
       const onEditArticle = useCallback(() => {
-         if(article) {
+         if (article) {
             navigate(getRouteArticleEdit(article?.id));
          }
       }, [article, navigate]);

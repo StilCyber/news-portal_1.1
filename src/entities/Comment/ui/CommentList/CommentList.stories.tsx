@@ -22,10 +22,10 @@ const comments = [
       user: { id: '1', username: 'Stil' },
    },
    {
-    id: '2',
-    text: 'It is beautiful!',
-    user: { id: '2', username: 'User' },
- },
+      id: '2',
+      text: 'It is beautiful!',
+      user: { id: '2', username: 'User' },
+   },
 ];
 
 export const Primary: Story = {

@@ -1,5 +1,5 @@
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 
 export interface ArticlesPageSchema {
    isLoading?: boolean;

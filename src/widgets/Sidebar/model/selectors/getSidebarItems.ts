@@ -5,7 +5,12 @@ import AboutIcon from '@/shared/assets/icons/about-20-20.svg?react';
 import ProfileIcon from '@/shared/assets/icons/profile-20-20.svg?react';
 import ArticleIcon from '@/shared/assets/icons/article-20-20.svg?react';
 import { SidebarItemType } from '../types/sidebar';
-import { getRouteAbout, getRouteArticles, getRouteMain, getRouteProfile } from '@/shared/const/router';
+import {
+   getRouteAbout,
+   getRouteArticles,
+   getRouteMain,
+   getRouteProfile,
+} from '@/shared/const/router';
 
 export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
    const sidebarItemsList: SidebarItemType[] = [

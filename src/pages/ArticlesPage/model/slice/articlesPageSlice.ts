@@ -7,7 +7,7 @@ import { ArticleView, ArticleType, ArticleSortField } from '@/entities/Article';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 
-import { SortOrder } from '@/shared/types';
+import { SortOrder } from '@/shared/types/sort';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 

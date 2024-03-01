@@ -2,9 +2,6 @@ import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk
 import { data } from '@/shared/const/data';
 import { fetchArticleById } from './fetchArticleById';
 
-
-
-
 describe('fetchArticleById.test', () => {
    test('success', async () => {
       const thunk = new TestAsyncThunk(fetchArticleById);

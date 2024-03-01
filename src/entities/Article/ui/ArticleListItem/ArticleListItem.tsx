@@ -45,7 +45,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
       return (
          <div className={classNames('', {}, [className, cls[view]])}>
-            <Card className={cls.card}>
+            <Card className={cls.card} data-testid="ArticleListItem">
                <div className={cls.header}>
                   <Avatar size={30} src={article.user.avatar} />
                   <Text text={article.user.username} className={cls.username} />
@@ -88,7 +88,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
          className={classNames('', {}, [className, cls[view]])}
          target={target}
       >
-         <Card className={cls.card}>
+         <Card className={cls.card} data-testid="ArticleListItem">
             <div className={cls.imageWrapper}>
                <AppImage
                   src={article.img}

@@ -9,9 +9,7 @@ import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitial
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from '@/widgets/Page';
 import cls from './ArticlesPage.module.scss';
-import {
-   articlesPageReducer,
-} from '../../model/slice/articlesPageSlice';
+import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
@@ -43,6 +41,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
          <Page
             className={classNames(cls.ArticlesPage, {}, [className])}
             onScrollEnd={onLoadNextPart}
+            data-testid="ArticlesPage"
          >
             <ArticlesPageFilters />
             <ArticleInfiniteList className={cls.list} />

@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { Suspense, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Text, TextSize } from '@/shared/ui/deprecated/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { VStack } from '@/shared/ui/Stack';
+import { VStack } from '@/shared/ui/deprecated/Stack';
 import { Comment, CommentList } from '@/entities/Comment';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Loader } from '@/shared/ui/Loader';
+import { Loader } from '@/shared/ui/redesigned/Loader';
 import { AddCommentForm } from '@/features/addCommentForm';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { selectAll } from '../../model/slices/articleDetailsCommentsSlice';

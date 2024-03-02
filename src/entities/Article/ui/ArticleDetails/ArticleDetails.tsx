@@ -4,16 +4,16 @@ import { useSelector } from 'react-redux';
 import {
    DynamicModuleLoader,
    ReducersList,
-} from '@/shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { Text, TextAlign, TextSize } from '@/shared/ui/deprecated/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg?react';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg?react';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Icon } from '@/shared/ui/Icon';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Icon } from '@/shared/ui/deprecated/Icon';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import cls from './ArticleDetails.module.scss';
 import {

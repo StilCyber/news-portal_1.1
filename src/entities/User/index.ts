@@ -6,3 +6,7 @@ export { UserRole } from './model/consts/userConsts';
 export { getUserRoles } from './model/selecrors/roleSelectors';
 
 export type { UserSchema, User } from './model/types/user';
+
+export { useJsonSettings } from './model/selecrors/jsonSettings';
+export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';

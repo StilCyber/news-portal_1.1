@@ -24,13 +24,14 @@
       "generate:slice": "node ./scripts/createSlice/index.js",
       "alias": "ts-node ./scripts/updateImports.ts",
       "postinstall": "node ./scripts/clear-cache.js",
-      "cypress": "npx cypress open"
+      "cypress": "npx cypress open",
+      "remove-feature": "ts-node ./scripts/remove-feature.ts"
    },
    "lint-staged": {
       "**/*.{ts,tsx}": [
-         "prettier --list-defferent",
+         "prettier --list-different",
          "eslint"
-      ]
+     ]
    },
    "keywords": [],
    "author": "STIL",
@@ -115,7 +116,7 @@
       "stylelint": "^16.1.0",
       "stylelint-config-standard-scss": "^13.0.0",
       "ts-loader": "^9.5.1",
-      "ts-morph": "^21.0.1",
+      "ts-morph": "^16.0.0",
       "tslib": "^2.6.2",
       "typescript": "^5.3.3",
       "vite": "^5.1.4",

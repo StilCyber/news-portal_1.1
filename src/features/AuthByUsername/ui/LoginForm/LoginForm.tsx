@@ -2,14 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { useSelector, useStore } from 'react-redux';
 import React, { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ThemeButton } from '@/shared/ui/Button';
-import { Input } from '@/shared/ui/Input';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import { ReduxStoreWithManager } from '@/app/providers/StoreProvider';
 import {
    DynamicModuleLoader,
    ReducersList,
-} from '@/shared/lib/components/DinamicModuleLoader/DinamicModuleLoader';
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
@@ -86,7 +86,7 @@ const LoginForm = memo((props: LoginFormProps) => {
                value={password}
             />
             <Button
-               theme={ThemeButton.OUTLINE}
+               theme={ButtonTheme.OUTLINE}
                className={cls.loginBtn}
                onClick={onLoginClick}
                disabled={isLoading}

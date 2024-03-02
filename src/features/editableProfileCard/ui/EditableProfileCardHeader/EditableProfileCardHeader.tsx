@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ThemeButton } from '@/shared/ui/Button';
-import { Text } from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Text } from '@/shared/ui/deprecated/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from '@/entities/User';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { profileActions } from '../../model/slice/profileSlice';
@@ -47,7 +47,7 @@ export const EditableProfileCardHeader = (
             <div>
                {readonly ? (
                   <Button
-                     theme={ThemeButton.OUTLINE}
+                     theme={ButtonTheme.OUTLINE}
                      onClick={onEdit}
                      data-testid="EditableProfileCardHeader.EditButton"
                   >
@@ -56,14 +56,14 @@ export const EditableProfileCardHeader = (
                ) : (
                   <HStack gap="8">
                      <Button
-                        theme={ThemeButton.OUTLINE_RED}
+                        theme={ButtonTheme.OUTLINE_RED}
                         onClick={onCanselEdit}
                         data-testid="EditableProfileCardHeader.CancelButton"
                      >
                         {t('Cancel')}
                      </Button>
                      <Button
-                        theme={ThemeButton.OUTLINE}
+                        theme={ButtonTheme.OUTLINE}
                         onClick={onSave}
                         data-testid="EditableProfileCardHeader.SaveButton"
                      >

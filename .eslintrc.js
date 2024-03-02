@@ -59,6 +59,7 @@ module.exports = {
                'role',
                'as',
                'border',
+               'feature',
             ],
          },
       ],
@@ -99,6 +100,7 @@ module.exports = {
             ],
          },
       ],
+      'react/no-unstable-nested-components': 1,
    },
    globals: {
       __IS_DEV__: true,

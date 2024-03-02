@@ -1,22 +1,23 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { UISchema } from '../types/UISchema';
 
 const initialState: UISchema = {
-   scroll: {},
+    scroll: {},
 };
 
-export const UISlice = createSlice({
-   name: 'UI',
-   initialState,
-   reducers: {
-      setScrollPosition: (
-         state,
-         { payload }: PayloadAction<{ path: string; position: number }>,
-      ) => {
-         state.scroll[payload.path] = payload.position;
-      },
-   },
+export const uiSlice = createSlice({
+    name: 'ui',
+    initialState,
+    reducers: {
+        setScrollPosition: (
+            state,
+            { payload }: PayloadAction<{ path: string; position: number }>,
+        ) => {
+            state.scroll[payload.path] = payload.position;
+        },
+    },
 });
 
-export const { actions: UIActions } = UISlice;
-export const { reducer: UIReducer } = UISlice;
+// Action creators are generated for each case reducer function
+export const { actions: uiActions } = uiSlice;
+export const { reducer: uiReducer } = uiSlice;

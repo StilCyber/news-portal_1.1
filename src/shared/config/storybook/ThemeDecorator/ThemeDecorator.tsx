@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/app/providers/ThemeProvider';
 const ThemeDecorator = (props: ThemeContextProps) => {
    const { children, theme } = props;
    return (
-      <ThemeProvider themeProps={theme}>
+      <ThemeProvider initialTheme={theme}>
          <div className={`app ${theme}`}>{children}</div>
       </ThemeProvider>
    );

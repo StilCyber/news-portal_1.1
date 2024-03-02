@@ -37,7 +37,7 @@ export function TestProvider(props: TestProviderProps) {
             asyncReducers={asyncReducers}
          >
             <I18nextProvider i18n={i18nForTests}>
-               <ThemeProvider themeProps={theme}>
+               <ThemeProvider initialTheme={theme}>
                   <div className={`app ${theme}`}>{children}</div>
                </ThemeProvider>
             </I18nextProvider>

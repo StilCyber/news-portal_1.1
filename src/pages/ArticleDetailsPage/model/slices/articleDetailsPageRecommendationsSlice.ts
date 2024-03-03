@@ -23,9 +23,7 @@ const initialState =
 export const articleDetailsPageRecommendationsSlice = createSlice({
    name: 'ArticleDetailsPageRecommendations',
    initialState,
-   reducers: {
-      exampleReducer: (state, action) => {},
-   },
+   reducers: {},
    extraReducers: (builder) => {
       builder
          .addCase(fetchArticleRecommendations.pending, (state) => {
@@ -57,5 +55,5 @@ export const getArticleRecommendations =
 
 export const { actions: ArticleDetailsPageRecommendationsActions } =
    articleDetailsPageRecommendationsSlice;
-export const { reducer: ArticleDetailsPageRecommendationsReducer } =
+export const { reducer: articleDetailsPageRecommendationsReducer } =
    articleDetailsPageRecommendationsSlice;

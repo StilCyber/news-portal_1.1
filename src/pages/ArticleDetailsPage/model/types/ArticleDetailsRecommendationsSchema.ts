@@ -1,10 +1,9 @@
+import { EntityState } from '@reduxjs/toolkit';
 import { Article } from '@/entities/Article';
 
-type Id = number | string;
+type Id = string;
 
-export interface ArticleDetailsRecommendationsSchema {
+export interface ArticleDetailsRecommendationsSchema extends EntityState<Article, Id> {
    isLoading?: boolean;
    error?: string;
-   ids: Id[];
-   entities: Record<Id, Article>;
 }

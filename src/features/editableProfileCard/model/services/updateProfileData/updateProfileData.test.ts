@@ -10,7 +10,7 @@ const data = {
    lastname: 'chan',
    first: 'Stil',
    city: 'afd',
-   country: Country.Netherlands,
+   country: Country.Armenia,
    currency: Currency.EUR,
 };
 

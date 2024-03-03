@@ -1,32 +1,30 @@
-import { useCallback } from 'react';
+import { memo, ReactNode, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-
-import { ArticleType } from '@/entities/Article';
-import cls from './Tabs.module.scss';
 import { Card, CardTheme } from '../Card/Card';
+import cls from './Tabs.module.scss';
 
-export interface TabItem<T extends string> {
-   value: T;
-   content: React.ReactNode;
+export interface TabItem {
+   value: string;
+   content: ReactNode;
 }
 
-interface TabsProps<T extends string> {
+interface TabsProps {
    className?: string;
-   tabs: TabItem<T>[];
-   value: T;
-   onTabClick: (type: ArticleType) => void;
+   tabs: TabItem[];
+   value: string;
+   onTabClick: (tab: TabItem) => void;
 }
 
 /**
+ * Устарел, используем новые компоненты из папки redesigned
  * @deprecated
  */
+export const Tabs = memo((props: TabsProps) => {
+   const { className, tabs, onTabClick, value } = props;
 
-export const Tabs = <T extends string>(props: TabsProps<T>) => {
-   const { className, tabs, value, onTabClick } = props;
-
-   const clickHandler = useCallback(
-      (tab: any) => () => {
-         onTabClick(tab.value);
+   const clickHandle = useCallback(
+      (tab: TabItem) => () => {
+         onTabClick(tab);
       },
       [onTabClick],
    );
@@ -35,16 +33,16 @@ export const Tabs = <T extends string>(props: TabsProps<T>) => {
       <div className={classNames(cls.Tabs, {}, [className])}>
          {tabs.map((tab) => (
             <Card
-               className={cls.tab}
-               key={tab.value}
                theme={
                   tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINED
                }
-               onClick={clickHandler(tab)}
+               className={cls.tab}
+               key={tab.value}
+               onClick={clickHandle(tab)}
             >
                {tab.content}
             </Card>
          ))}
       </div>
    );
-};
+});

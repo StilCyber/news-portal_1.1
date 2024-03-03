@@ -21,7 +21,7 @@ describe('profileSlice.test', () => {
       expect(
          profileReducer(
             state as ProfileSchema,
-            profileActions.setReanonly(true),
+            profileActions.setReadonly(true),
          ),
       ).toEqual({ readonly: true });
    });
@@ -33,7 +33,7 @@ describe('profileSlice.test', () => {
       };
 
       expect(
-         profileReducer(state as ProfileSchema, profileActions.canselEdit()),
+         profileReducer(state as ProfileSchema, profileActions.cancelEdit()),
       ).toEqual({
          readonly: true,
          validateErrors: undefined,

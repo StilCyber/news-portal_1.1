@@ -1,31 +1,31 @@
-import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Country } from '@/entities/Country';
-import { Currency } from '@/entities/Currency';
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { ProfileCard } from '@/entities/Profile';
 import {
    DynamicModuleLoader,
    ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { ProfileCard } from '@/entities/Profile';
-import { VStack } from '@/shared/ui/deprecated/Stack';
-import { profileActions, profileReducer } from '../../model/slice/profileSlice';
-import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { ValidateProfileErrors } from '../../model/consts/consts';
-import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
-import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
-import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
+import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
+import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 
 interface EditableProfileCardProps {
    className?: string;
-   id: string;
+   id?: string;
 }
 
 const reducers: ReducersList = {
@@ -34,8 +34,8 @@ const reducers: ReducersList = {
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
    const { className, id } = props;
-
    const { t } = useTranslation('profile');
+
    const dispatch = useAppDispatch();
    const formData = useSelector(getProfileForm);
    const isLoading = useSelector(getProfileIsLoading);
@@ -44,14 +44,20 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
    const validateErrors = useSelector(getProfileValidateErrors);
 
    const validateErrorTranslates = {
-      [ValidateProfileErrors.SERVER_ERROR]: t('Server error'),
-      [ValidateProfileErrors.INCORRECT_AGE]: t('Incorrect age'),
-      [ValidateProfileErrors.INCORRECT_COUNTRY]: t('Incorrect region'),
+      [ValidateProfileErrors.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
+      [ValidateProfileErrors.INCORRECT_COUNTRY]: t('Некорректный регион'),
+      [ValidateProfileErrors.NO_DATA]: t('Данные не указаны'),
       [ValidateProfileErrors.INCORRECT_USER_DATA]: t(
-         'First and last name are required',
+         'Имя и фамилия обязательны',
       ),
-      [ValidateProfileErrors.NO_DATA]: t('The data is not specified'),
+      [ValidateProfileErrors.INCORRECT_AGE]: t('Некорректный возраст'),
    };
+
+   useInitialEffect(() => {
+      if (id) {
+         dispatch(fetchProfileData(id));
+      }
+   });
 
    const onChangeFirstname = useCallback(
       (value?: string) => {
@@ -67,16 +73,16 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
       [dispatch],
    );
 
-   const onChangeAge = useCallback(
+   const onChangeCity = useCallback(
       (value?: string) => {
-         dispatch(profileActions.updateProfile({ age: Number(value || 0) }));
+         dispatch(profileActions.updateProfile({ city: value || '' }));
       },
       [dispatch],
    );
 
-   const onChangeCity = useCallback(
+   const onChangeAge = useCallback(
       (value?: string) => {
-         dispatch(profileActions.updateProfile({ city: value || '' }));
+         dispatch(profileActions.updateProfile({ age: Number(value || 0) }));
       },
       [dispatch],
    );
@@ -109,26 +115,16 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
       [dispatch],
    );
 
-   useInitialEffect(() => {
-      if (id) {
-         dispatch(fetchProfileData(id));
-      }
-   });
-
-   const reducers: ReducersList = {
-      profile: profileReducer,
-   };
-
    return (
       <DynamicModuleLoader reducers={reducers}>
-         <VStack className={classNames('', {}, [className])}>
+         <VStack gap="16" max className={classNames('', {}, [className])}>
             <EditableProfileCardHeader />
             {validateErrors?.length &&
-               validateErrors.map((err: ValidateProfileErrors) => (
+               validateErrors.map((err) => (
                   <Text
+                     key={err}
                      theme={TextTheme.ERROR}
                      text={validateErrorTranslates[err]}
-                     key={err}
                      data-testid="EditableProfileCard.Error"
                   />
                ))}

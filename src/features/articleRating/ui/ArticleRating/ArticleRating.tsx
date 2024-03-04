@@ -19,11 +19,10 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
    const { t } = useTranslation();
    const userData = useSelector(getUserAuthData);
 
-   const { isLoading, data } = useGetArticleRating({
+   const { data, isLoading } = useGetArticleRating({
       articleId,
       userId: userData?.id ?? '',
    });
-
    const [rateArticleMutation] = useRateArticle();
 
    const handleRateArticle = useCallback(
@@ -61,13 +60,13 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
       return <Skeleton width="100%" height={120} />;
    }
 
-   const rating = data?.at(-1)?.rate;
+   const rating = data?.[0];
 
    return (
       <Rating
          onCancel={onCancel}
          onAccept={onAccept}
-         rate={rating}
+         rate={rating?.rate}
          className={className}
          title={t('Оцените статью')}
          feedbackTitle={t(

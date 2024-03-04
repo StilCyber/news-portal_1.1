@@ -4,7 +4,7 @@ import { Theme } from '@/shared/const/theme';
 import { Rating } from './Rating';
 
 const meta: Meta<typeof Rating> = {
-   title: 'shared/Rating',
+   title: 'entities/Rating',
    component: Rating,
    parameters: {},
    tags: ['autodocs'],

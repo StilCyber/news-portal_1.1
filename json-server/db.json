@@ -1114,6 +1114,36 @@
       "userId": "1",
       "text": "фыафыа",
       "id": "Fmg06f6"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "The article is greate!",
+      "id": "AafxXgH"
+    },
+    {
+      "articleId": "6f91vPH",
+      "userId": "1",
+      "text": "This is comment!",
+      "id": "Kzxlcj9"
+    },
+    {
+      "articleId": "6f91vPH",
+      "userId": "1",
+      "text": "asd",
+      "id": "UfUUxcr"
+    },
+    {
+      "articleId": "6f91vPH",
+      "userId": "1",
+      "text": "111!!",
+      "id": "1sJZLpK"
+    },
+    {
+      "articleId": "6f91vPH",
+      "userId": "1",
+      "text": "New Comment",
+      "id": "EjXTeKr"
     }
   ],
   "users": [
@@ -1132,7 +1162,7 @@
       "avatar": "https://i.pinimg.com/474x/01/70/7e/01707eb3c19f56df19bb96ee1cf3cf75.jpg",
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
-        "theme": "app_light_theme",
+        "theme": "app_orange_theme",
         "isFirstVisit": true
       }
     },
@@ -1151,7 +1181,7 @@
       "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg",
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
-        "theme": "app_dark_theme"
+        "theme": "app_orange_theme"
       }
     },
     {
@@ -1443,6 +1473,13 @@
       "rate": 5,
       "feedback": "",
       "id": "Ug7Ktxo"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 4,
+      "feedback": "asdf",
+      "id": "g4Cwx_T"
     }
   ],
   "profile-ratings": [

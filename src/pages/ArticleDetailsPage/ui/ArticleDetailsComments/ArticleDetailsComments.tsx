@@ -14,7 +14,7 @@ import { addCommentForArticle } from '../../model/services/addCommentForArticle/
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { getArticleCommentsIsLoading } from '../../model/selectors/getComments';
-import { getArticleRecommendations } from '../../model/slices/articleDetailsPageRecommendationsSlice';
+import { selectAll } from '../../model/slices/articleDetailsCommentsSlice';
 
 interface ArticleDetailsCommentsProps {
    className?: string;
@@ -25,7 +25,7 @@ export const ArticleDetailsComments = memo(
    (props: ArticleDetailsCommentsProps) => {
       const { className, id } = props;
       const { t } = useTranslation();
-      const comments = useSelector(getArticleRecommendations.selectAll);
+      const comments = useSelector(selectAll);
       const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
       const dispatch = useAppDispatch();
 
@@ -52,7 +52,10 @@ export const ArticleDetailsComments = memo(
             <Suspense fallback={<Loader />}>
                <AddCommentForm onSendComment={onSendComment} />
             </Suspense>
-            <CommentList isLoading={commentsIsLoading} comments={comments as Comment[]} />
+            <CommentList
+               isLoading={commentsIsLoading}
+               comments={comments as Comment[]}
+            />
          </VStack>
       );
    },

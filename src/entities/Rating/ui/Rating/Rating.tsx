@@ -39,7 +39,7 @@ export const Rating = memo((props: RatingProps) => {
       title,
       rate = 0,
    } = props;
-   const { t } = useTranslation();
+   const { t } = useTranslation('article-details');
    const [isModalOpen, setIsModalOpen] = useState(false);
    const [starsCount, setStarsCount] = useState(rate);
    const [feedback, setFeedback] = useState('');

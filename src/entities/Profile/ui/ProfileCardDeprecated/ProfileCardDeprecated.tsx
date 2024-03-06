@@ -77,7 +77,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
          )}
          <InputDeprecated
             value={data?.first}
-            placeholder={t('Ваше имя')}
+            placeholder={t('Имя')}
             className={cls.input}
             onChange={onChangeFirstname}
             readonly={readonly}
@@ -85,7 +85,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
          />
          <InputDeprecated
             value={data?.lastname}
-            placeholder={t('Ваша фамилия')}
+            placeholder={t('Фамилия')}
             className={cls.input}
             onChange={onChangeLastname}
             readonly={readonly}
@@ -93,7 +93,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
          />
          <InputDeprecated
             value={data?.age}
-            placeholder={t('Ваш возраст')}
+            placeholder={t('Возраст')}
             className={cls.input}
             onChange={onChangeAge}
             readonly={readonly}
@@ -107,14 +107,14 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
          />
          <InputDeprecated
             value={data?.username}
-            placeholder={t('Введите имя пользователя')}
+            placeholder={t('Имя пользователя')}
             className={cls.input}
             onChange={onChangeUsername}
             readonly={readonly}
          />
          <InputDeprecated
             value={data?.avatar}
-            placeholder={t('Введите ссылку на аватар')}
+            placeholder={t('Cсылка на аватар')}
             className={cls.input}
             onChange={onChangeAvatar}
             readonly={readonly}

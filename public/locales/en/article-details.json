@@ -1,6 +1,16 @@
 {
-    "Статья не найдена": "Article not found",
-    "Комментарии": "Comments",
-    "Назад к списку": "Back to list",
-    "Рекомендуем": "Recommend"
+   "Статья не найдена": "Article not found",
+   "Комментарии": "Comments",
+   "Назад к списку": "Back to list",
+   "Рекомендуем": "Recommend",
+   "Комментарии отсутствуют": "There are no comments",
+   "Ваш отзыв": "Your feedback",
+   "Спасибо за оценку!": "Thanks for the assessment!",
+   "Закрыть": "Close",
+   "Отправить": "Send",
+   "Оставьте свой отзыв о статье, это поможет улучшить качество": "Leave your feedback about the article, it will help to improve the quality",
+   "Читать далее...": "Read more...",
+   "Статьи не найдены": "No articles found",
+   "Произошла ошибка при загрузке статьи": "An error occurred while uploading the article",
+   "Введите текст комментария": "Enter the comment text"
 }

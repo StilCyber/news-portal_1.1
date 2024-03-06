@@ -1162,7 +1162,7 @@
       "avatar": "https://i.pinimg.com/474x/01/70/7e/01707eb3c19f56df19bb96ee1cf3cf75.jpg",
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
-        "theme": "app_orange_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true
       }
     },
@@ -1480,6 +1480,73 @@
       "rate": 4,
       "feedback": "asdf",
       "id": "g4Cwx_T"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "wrUeqv3"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 4,
+      "id": "rNGAx9a"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "d7urGHG"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "QRgTz5a"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "2CTyLsi"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "qyZdyo3"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "lCTitJN"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "bcXb2tY"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "KF29CXh"
+    },
+    {
+      "userId": "1",
+      "articleId": "5",
+      "rate": 5,
+      "id": "mj5M1hT"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 5,
+      "feedback": "",
+      "id": "c4_Nq6B"
     }
   ],
   "profile-ratings": [

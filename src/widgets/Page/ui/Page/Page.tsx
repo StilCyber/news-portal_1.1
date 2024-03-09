@@ -54,7 +54,7 @@ export const Page = memo((props: PageProps) => {
    }, 500);
 
    return (
-      <main
+      <section
          ref={wrapperRef}
          className={classNames(
             toggleFeatures({
@@ -71,6 +71,6 @@ export const Page = memo((props: PageProps) => {
       >
          {children}
          {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
-      </main>
+      </section>
    );
 });

@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import ThemeIconDeprecated from '@/shared/assets/icons/theme-light.svg?react';
 import ThemeIcon from '@/shared/assets/icons/theme.svg?react';

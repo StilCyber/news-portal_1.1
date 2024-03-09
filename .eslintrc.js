@@ -23,8 +23,8 @@ module.exports = {
       '@typescript-eslint',
       'i18next',
       'react-hooks',
-      'ulbi-tv-plugin',
       'unused-imports',
+      'stil-plugin-paths',
    ],
    rules: {
       'react/jsx-filename-extension': [
@@ -75,21 +75,14 @@ module.exports = {
       'react/no-array-index-key': 'off',
 
       'unused-imports/no-unused-imports': 'error',
-
-      'ulbi-tv-plugin/path-checker': [
+      'react/no-unstable-nested-components': 1,
+      'stil-plugin-paths/path-checker': [
          'error',
          {
             alias: '@',
          },
       ],
-      'ulbi-tv-plugin/layer-imports': [
-         'error',
-         {
-            alias: '@',
-            ignoreImportPatterns: [],
-         },
-      ],
-      'ulbi-tv-plugin/public-api-imports': [
+      'stil-plugin-paths/public-api-imports': [
          'error',
          {
             alias: '@',
@@ -100,7 +93,13 @@ module.exports = {
             ],
          },
       ],
-      'react/no-unstable-nested-components': 1,
+      'stil-plugin-paths/layer-imports': [
+         'error',
+         {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+         },
+      ],
    },
    globals: {
       __IS_DEV__: true,

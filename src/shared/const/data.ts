@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+// eslint-disable-next-line stil-plugin-paths/layer-imports
 import { ArticleType, ArticleBlockType } from '@/entities/Article';
 
 export const data = {

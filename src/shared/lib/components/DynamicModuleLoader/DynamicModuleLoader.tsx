@@ -1,7 +1,8 @@
-import React, { FC, ReactNode, useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
 import { ReduxStoreWithManager } from '@/app/providers/StoreProvider';
+// eslint-disable-next-line stil-plugin-paths/layer-imports
 import {
    StateSchema,
    StateSchemaKey,

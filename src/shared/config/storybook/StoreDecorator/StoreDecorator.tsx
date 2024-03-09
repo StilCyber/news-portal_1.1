@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
+// eslint-disable-next-line stil-plugin-paths/layer-imports
 import '@/app/styles/index.scss';
 import { loginReducer } from '@/features/AuthByUsername/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';

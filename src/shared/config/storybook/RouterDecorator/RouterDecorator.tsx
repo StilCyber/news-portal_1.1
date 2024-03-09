@@ -1,3 +1,4 @@
+// eslint-disable-next-line stil-plugin-paths/layer-imports
 import '@/app/styles/index.scss';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';

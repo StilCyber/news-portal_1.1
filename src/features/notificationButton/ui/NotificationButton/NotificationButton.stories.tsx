@@ -4,7 +4,7 @@ import { Theme } from '@/shared/const/theme';
 import { NotificationButton } from './NotificationButton';
 
 const meta: Meta<typeof NotificationButton> = {
-   title: 'featured/NotificationButton',
+   title: 'features/NotificationButton',
    component: NotificationButton,
    parameters: {},
    tags: ['autodocs'],
